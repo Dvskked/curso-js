@@ -29,7 +29,7 @@
 ## Caracteristicas del Curso
 
 - **10 Modulos completos** — Cubre todo lo que necesitas saber de JavaScript
-- **83 Lecciones detalladas** — Teoria y practica en cada una
+- **82 Lecciones detalladas** — Teoria y practica en cada una
 - **5 Proyectos practicos** — Aplica todo lo aprendido
 - **Codigo fuente de cada ejemplo** — Copia, pega y experimenta
 - **Responsive Design (mobile-first)** — Disena para todos los dispositivos
@@ -67,6 +67,12 @@ curso-js/
     styles.css            Estilos completos con temas claro/oscuro
   js/
     main.js               Interactividad con JavaScript vanilla
+  favicon.svg             Icono de la web (SVG)
+  favicon.ico             Icono de la web (fallback)
+  apple-touch-icon.png    Icono para dispositivos Apple
+  og-image.png            Imagen para compartir en redes sociales (Open Graph)
+  robots.txt              Instrucciones para motores de busqueda
+  sitemap.xml             Mapa del sitio para SEO
   README.md               Este archivo
 ```
 
@@ -75,6 +81,25 @@ curso-js/
 | `index.html` | Estructura HTML completa con todos los modulos, lecciones y ejemplos |
 | `css/styles.css` | Diseno responsive, temas, animaciones, Grid, Flexbox y mas |
 | `js/main.js` | Navegacion, temas, validacion, IntersectionObserver, copiar codigo |
+| `favicon.svg` / `favicon.ico` | Iconos de la pestaña del navegador |
+| `og-image.png` | Imagen de previsualizacion para redes sociales (1200x630) |
+| `robots.txt` | Directivas para motores de busqueda |
+| `sitemap.xml` | Ayuda a Google a indexar el contenido |
+
+---
+
+## SEO y Buenas Practicas
+
+Este proyecto incorpora optimizacion para motores de busqueda (SEO) y buenas practicas de desarrollo web:
+
+- **Meta tags completos** — description, keywords, author, robots, canonical.
+- **Open Graph y Twitter Cards** — para una buena previsualizacion al compartir en redes.
+- **Datos estructurados JSON-LD** — marcado `Course` para que Google muestre el curso enriquecido.
+- **Fuentes web (Google Fonts)** — Inter y JetBrains Mono para tipografia consistente.
+- **HTML semantico y accesible** — encabezados jerarquicos (H1-H4), roles ARIA, labels en formularios.
+- **Responsive design** — mobile-first, se adapta a movil, tablet y escritorio.
+- **Tema claro/oscuro** — con deteccion de preferencia del sistema y persistencia en localStorage.
+- **Velocidad** — preconnect para fuentes, sin librerias externas pesadas.
 
 ---
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dvskked.github.io/andres.github.io/sitemap.xml
