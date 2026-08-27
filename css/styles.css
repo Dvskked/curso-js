@@ -965,25 +965,47 @@ blockquote p:last-child {
 }
 
 @media (min-width: 1025px) {
+  /* Layout de dos columnas: contenido principal + tarjeta de codigo */
+  .hero .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+    text-align: left;
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  .hero-content .hero-badge,
+  .hero-content .hero-cta {
+    align-self: flex-start;
+  }
+
+  .hero-content .hero-stats {
+    justify-content: flex-start;
+  }
+
+  .hero-subtitle {
+    margin-inline: 0;
+  }
+
   .hero-visual {
     display: block;
-    position: absolute;
-    right: 4%;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
     max-width: 440px;
-    animation: floatIn 0.9s var(--ease-out-expo) 0.5s both;
+    margin-inline: auto;
+    animation: fadeInUp 0.9s var(--ease-out-expo) 0.5s both;
   }
-}
 
-@keyframes floatIn {
-  from {
-    opacity: 0;
-    transform: translateY(-50%) translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0);
+  .hero-visual .code-block {
+    margin: 0;
   }
 }
 
