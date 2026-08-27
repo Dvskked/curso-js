@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curso completo y gratuito de JavaScript. Aprende desde cero hasta nivel profesional con ejemplos practicos, proyectos reales y las mejores practicas.">
+  <meta name="keywords" content="JavaScript, curso JavaScript, programacion, aprendizaje, tutorial, DOM, ES6, async, POO, frontend">
+  <meta name="author" content="Andres Felipe Forero Sanchez">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Curso Completo de JavaScript 2026">
+  <meta property="og:description" content="Aprende JavaScript desde cero hasta nivel profesional. Curso practico con proyectos reales.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dvskked.github.io/andres.github.io/">
+  <meta property="og:image" content="https://dvskked.github.io/andres.github.io/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Curso Completo de JavaScript 2026">
+  <meta name="twitter:description" content="Aprende JavaScript desde cero hasta nivel profesional.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Curso Completo de JavaScript 2026 | Aprende Programacion</title>
+</head>
+<body>
+
+  <!-- HEADER Y NAVEGACION -->
+  <header class="site-header" id="site-header" role="banner">
+    <nav class="navbar" aria-label="Navegacion principal">
+      <a href="#" class="nav-logo" aria-label="Curso JavaScript - Inicio">
+        <span class="logo-icon" aria-hidden="true">{}</span>
+        <span>Curso<span class="logo-accent">JS</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="menubar" aria-hidden="true">
+        <li role="none"><a href="#sobre-mi" class="nav-link" role="menuitem">Sobre Mi</a></li>
+        <li role="none"><a href="#contenido" class="nav-link" role="menuitem">Contenido</a></li>
+        <li role="none"><a href="#proyectos" class="nav-link" role="menuitem">Proyectos</a></li>
+        <li role="none"><a href="#recursos" class="nav-link" role="menuitem">Recursos</a></li>
+        <li role="none"><a href="#contacto" class="nav-link" role="menuitem">Contacto</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+          <span class="theme-icon-light" aria-hidden="true">&#9788;</span>
+          <span class="theme-icon-dark" aria-hidden="true">&#9790;</span>
+        </button>
+        <button class="nav-hamburger" id="hamburger" type="button" aria-label="Abrir menu de navegacion" aria-expanded="false" aria-controls="navLinks">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="site-main" id="site-main">
+
+    <!-- HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-gradient" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-badge" aria-label="Edicion del curso">Curso 2026</span>
+          <h1 class="hero-title" id="hero-title">
+            Curso Completo de <span class="text-gradient">JavaScript</span>
+          </h1>
+          <p class="hero-subtitle">
+            Aprende programacion web desde cero hasta nivel profesional.
+            Domina JavaScript moderno, ES6+, DOM, asincronia, POO, patrones de diseno y
+            mucho mas con proyectos practicos reales.
+          </p>
+          <div class="hero-cta">
+            <a href="#contenido" class="btn btn-primary btn-lg" role="button">Ver Contenido</a>
+            <a href="#modulo-1" class="btn btn-secondary btn-lg" role="button">Empezar Ahora</a>
+          </div>
+          <div class="hero-stats" role="list" aria-label="Estadisticas del curso">
+            <div class="stat" role="listitem">
+              <strong>10</strong>
+              <span>Modulos</span>
+            </div>
+            <div class="stat" role="listitem">
+              <strong>80+</strong>
+              <span>Lecciones</span>
+            </div>
+            <div class="stat" role="listitem">
+              <strong>5</strong>
+              <span>Proyectos</span>
+            </div>
+            <div class="stat" role="listitem">
+              <strong>100%</strong>
+              <span>Practico</span>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-visual" aria-label="Vista previa de codigo JavaScript">
+          <pre class="code-block glass-effect" aria-hidden="true"><code><span class="code-comment">// Tu primer programa en JavaScript</span>
+<span class="code-keyword">function</span> <span class="code-func">saludar</span>(nombre) {
+  <span class="code-keyword">const</span> mensaje = <span class="code-string">`Hola, </span><span class="code-keyword">${</span>nombre<span class="code-keyword">}</span><span class="code-string">!`</span>;
+  <span class="code-keyword">return</span> mensaje;
+}
+
+<span class="code-keyword">const</span> lenguaje = <span class="code-string">"JavaScript"</span>;
+<span class="code-keyword">const</span> anio = <span class="code-number">2026</span>;
+
+console.<span class="code-func">log</span>(<span class="code-func">saludar</span>(lenguaje));
+<span class="code-comment">// "Hola, JavaScript!"</span>
+
+<span class="code-keyword">const</span> numeros = [<span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span>, <span class="code-number">4</span>, <span class="code-number">5</span>];
+<span class="code-keyword">const</span> dobles = numeros.<span class="code-func">map</span>(n =&gt; n * <span class="code-number">2</span>);
+<span class="code-comment">// [2, 4, 6, 8, 10]</span></code></pre>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section class="about" id="sobre-mi" aria-labelledby="sobre-mi-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="sobre-mi-title">Sobre Mi</h2>
+          <p class="section-subtitle">Conoce al autor del curso</p>
+        </header>
+        <div class="about-grid">
+          <figure class="about__avatar" aria-label="Foto de perfil">
+            <div class="avatar-placeholder" aria-hidden="true">AF</div>
+            <figcaption class="sr-only">Foto de Andres Felipe Forero Sanchez</figcaption>
+          </figure>
+          <div class="about-text">
+            <h3>Hola, soy <span class="highlight">Andres Forero</span></h3>
+            <p>
+              Aprendiz de Analisis y Desarrollo de Software en el SENA CSET de Bucaramanga, Colombia.
+              Apasionado por el desarrollo web y las tecnologias frontend. He trabajado con
+              JavaScript, HTML5, CSS3, Python, PHP, MySQL, GitHub, C#, PostgreSQL y Docker.
+            </p>
+            <p>
+              Mi objetivo es compartir todo lo que he aprendido para que puedas
+              dominar JavaScript y convertirte en un desarrollador completo.
+              Creo firmemente que todo el mundo puede aprender a programar.
+            </p>
+            <ul class="about-skills" role="list" aria-label="Habilidades">
+              <li role="listitem">JavaScript</li>
+              <li role="listitem">HTML5</li>
+              <li role="listitem">CSS3</li>
+              <li role="listitem">Python</li>
+              <li role="listitem">PHP</li>
+              <li role="listitem">MySQL</li>
+              <li role="listitem">GitHub</li>
+              <li role="listitem">Docker</li>
+            </ul>
+            <div class="about-links">
+              <a href="https://github.com/Dvskked" class="about-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Andres Forero">
+                <span aria-hidden="true">&#128279;</span> GitHub
+              </a>
+              <a href="mailto:siriusplanet76@gmail.com" class="about-link" aria-label="Enviar email a Andres Forero">
+                <span aria-hidden="true">&#9993;</span> Email
+              </a>
+              <a href="https://dvskked.github.io/andres.github.io" class="about-link" target="_blank" rel="noopener noreferrer" aria-label="Portfolio de Andres Forero">
+                <span aria-hidden="true">&#127760;</span> Portfolio
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENIDO / TABLA DE CONTENIDOS -->
+    <section class="section section-alt" id="contenido" aria-labelledby="contenido-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="contenido-title">Contenido del Curso</h2>
+          <p class="section-subtitle">10 modulos disenados para llevarte desde cero hasta nivel profesional</p>
+        </header>
+        <div class="module-grid">
+          <!-- Modulo 1 -->
+          <article class="module-card animate-on-scroll" id="module-card-1">
+            <div class="module-card-header">
+              <span class="module-card-number">01</span>
+              <span class="module-status not-started">No iniciado</span>
+            </div>
+            <h3 class="module-card-title">Fundamentos de JavaScript</h3>
+            <p class="module-card-desc">Variables, tipos de datos, operadores y operaciones basicas.</p>
+            <div class="module-card-meta">
+              <span>8 lecciones</span>
+              <span class="lesson-count-badge">Basico</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="module-card-actions">
+              <a href="#modulo-1" class="btn btn-primary btn-sm module-start-btn">Iniciar</a>
+            </div>
+          </article>
+          <!-- Modulo 2 -->
+          <article class="module-card animate-on-scroll" id="module-card-2">
+            <div class="module-card-header">
+              <span class="module-card-number">02</span>
+              <span class="module-status not-started">No iniciado</span>
+            </div>
+            <h3 class="module-card-title">Estructuras de Control</h3>
+            <p class="module-card-desc">Condicionales, bucles y flujo de ejecucion.</p>
+            <div class="module-card-meta">
+              <span>8 lecciones</span>
+              <span class="lesson-count-badge">Basico</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="module-card-actions">
+              <a href="#modulo-2" class="btn btn-primary btn-sm module-start-btn">Iniciar</a>
+            </div>
+          </article>
+          <!-- Modulo 3 -->
+          <article class="module-card animate-on-scroll" id="module-card-3">
+            <div class="module-card-header">
+              <span class="module-card-number">03</span>
+              <span class="module-status not-started">No iniciado</span>
+            </div>
+            <h3 class="module-card-title">Funciones</h3>
+            <p class="module-card-desc">Declaraciones, expresiones, arrow functions, closures y callbacks.</p>
+            <div class="module-card-meta">
+              <span>8 lecciones</span>
+              <span class="lesson-count-badge">Basico</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="module-card-actions">
+              <a href="#modulo-3" class="btn btn-primary btn-sm module-start-btn">Iniciar</a>
+            </div>
+          </article>
+          <!-- Modulo 4 -->
+          <article class="module-card animate-on-scroll" id="module-card-4">
+            <div class="module-card-header">
+              <span class="module-card-number">04</span>
+              <span class="module-status not-started">No iniciado</span>
+            </div>
+            <h3 class="module-card-title">Arrays y Objetos</h3>
+            <p class="module-card-desc">Metodos de arrays, objetos, desestructuracion y spread/rest.</p>
+            <div class="module-card-meta">
+              <span>9 lecciones</span>
+              <span class="lesson-count-badge">Intermedio</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="module-card-actions">
+              <a href="#modulo-4" class="btn btn-primary btn-sm module-start-btn">Iniciar</a>
+            </div>
+          </article>
+          <!-- Modulo 5 -->
+          <article class="module-card animate-on-scroll" id="module-card-5">
+            <div class="module-card-header">
+              <span class="module-card-number">05</span>
+              <span class="module-status not-started">No iniciado</span>
+            </div>
+            <h3 class="module-card-title">Manipulacion del DOM</h3>
+            <p class="module-card-desc">Selectores, eventos, creacion y modificacion de elementos.</p>
+            <div class="module-card-meta">
+              <span>8 lecciones</span>
+              <span class="lesson-count-badge">Intermedio</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="module-card-actions">
+              <a href="#modulo-5" class="btn btn-primary btn-sm module-start-btn">Iniciar</a>
+            </div>
+          </article>
+          <!-- Modulo 6 -->
+          <article class="module-card animate-on-scroll" id="module-card-6">
+            <div class="module-card-header">
+              <span class="module-card-number">06</span>
+              <span class="module-status not-started">No iniciado</span>
+            </div>
+            <h3 class="module-card-title">Asincronia y Promesas</h3>
+            <p class="module-card-desc">Callbacks, promesas, async/await y peticiones HTTP.</p>
+            <div class="module-card-meta">
+              <span>8 lecciones</span>
+              <span class="lesson-count-badge">Intermedio</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="module-card-actions">
+              <a href="#modulo-6" class="btn btn-primary btn-sm module-start-btn">Iniciar</a>
+            </div>
+          </article>
+          <!-- Modulo 7 -->
+          <article class="module-card animate-on-scroll" id="module-card-7">
+            <div class="module-card-header">
+              <span class="module-card-number">07</span>
+              <span class="module-status not-started">No iniciado</span>
+            </div>
+            <h3 class="module-card-title">Programacion Orientada a Objetos</h3>
+            <p class="module-card-desc">Clases, herencia, encapsulamiento y patrones de diseno.</p>
+            <div class="module-card-meta">
+              <span>7 lecciones</span>
+              <span class="lesson-count-badge">Intermedio</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="module-card-actions">
+              <a href="#modulo-7" class="btn btn-primary btn-sm module-start-btn">Iniciar</a>
+            </div>
+          </article>
+          <!-- Modulo 8 -->
+          <article class="module-card animate-on-scroll" id="module-card-8">
+            <div class="module-card-header">
+              <span class="module-card-number">08</span>
+              <span class="module-status not-started">No iniciado</span>
+            </div>
+            <h3 class="module-card-title">Web APIs y Browser</h3>
+            <p class="module-card-desc">LocalStorage, fetch, geolocalizacion, Canvas y mas.</p>
+            <div class="module-card-meta">
+              <span>8 lecciones</span>
+              <span class="lesson-count-badge">Avanzado</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="module-card-actions">
+              <a href="#modulo-8" class="btn btn-primary btn-sm module-start-btn">Iniciar</a>
+            </div>
+          </article>
+          <!-- Modulo 9 -->
+          <article class="module-card animate-on-scroll" id="module-card-9">
+            <div class="module-card-header">
+              <span class="module-card-number">09</span>
+              <span class="module-status not-started">No iniciado</span>
+            </div>
+            <h3 class="module-card-title">Herramientas y Ecosistema</h3>
+            <p class="module-card-desc">NPM, Webpack, Vite, testing, TypeScript basico y deployment.</p>
+            <div class="module-card-meta">
+              <span>8 lecciones</span>
+              <span class="lesson-count-badge">Avanzado</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="module-card-actions">
+              <a href="#modulo-9" class="btn btn-primary btn-sm module-start-btn">Iniciar</a>
+            </div>
+          </article>
+          <!-- Modulo 10 -->
+          <article class="module-card animate-on-scroll" id="module-card-10">
+            <div class="module-card-header">
+              <span class="module-card-number">10</span>
+              <span class="module-status not-started">No iniciado</span>
+            </div>
+            <h3 class="module-card-title">Proyecto Final Integrador</h3>
+            <p class="module-card-desc">Construye una aplicacion completa aplicando todo lo aprendido.</p>
+            <div class="module-card-meta">
+              <span>10 lecciones</span>
+              <span class="lesson-count-badge">Avanzado</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="module-card-actions">
+              <a href="#modulo-10" class="btn btn-primary btn-sm module-start-btn">Iniciar</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- MODULO 1: FUNDAMENTOS DE JAVASCRIPT -->
+    <section class="module" id="modulo-1" aria-labelledby="modulo-1-title">
+      <div class="container">
+        <div class="module-progress-header">
+          <span class="module-progress-label">Modulo 1 &mdash; 0/8 lecciones</span>
+          <div class="progress-bar-container"><div class="progress-fill" style="width:0%"></div></div>
+          <button class="module-back-btn" type="button" onclick="document.body.classList.remove('course-mode'); document.querySelectorAll('.module[id]').forEach(function(m){m.classList.remove('active-module')}); window.scrollTo(0,0);">Volver al inicio</button>
+        </div>
+        <header class="module-header">
+          <span class="module-badge">Modulo 01</span>
+          <h2 class="section-title" id="modulo-1-title">Fundamentos de JavaScript</h2>
+          <p class="module-desc">
+            En este modulo aprenderas los cimientos de todo programa en JavaScript. Comenzaremos
+            con las variables, los tipos de datos y las operaciones basicas que son la base
+            para todo lo demas que aprenderas en este curso.
+          </p>
+        </header>
+
+        <!-- Leccion 1.1 -->
+        <article class="lesson" id="leccion-1-1" aria-labelledby="leccion-1-1-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-1-1"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-1-1-title">1.1 Variables: var, let y const</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              <strong>JavaScript</strong> ofrece tres formas de declarar variables: <code>var</code>, <code>let</code> y <code>const</code>. Cada una tiene un comportamiento diferente en cuanto a alcance, elevacion (hoisting) y reasignacion.
+            </p>            <h4 id="subtema-var">La variable var (legado)</h4>            <p>
+              <code>var</code> es la forma antigua. Tiene <strong>alcance de funcion</strong>, accesible desde cualquier lugar dentro de la funcion donde se declaro.
+            </p>            <pre class="code-block"><code><span class="code-comment">// var: alcance de funcion (no recomendado en codigo moderno)</span>
+<span class="code-keyword">var</span> nombre = <span class="code-string">"Ana"</span>;
+<span class="code-keyword">var</span> edad = <span class="code-number">25</span>;
+<span class="code-keyword">var</span> activo = <span class="code-keyword">true</span>;
+
+<span class="code-comment">// Problema con var: se escapa del bloque</span>
+<span class="code-keyword">if</span> (<span class="code-keyword">true</span>) {
+  <span class="code-keyword">var</span> mensaje = <span class="code-string">"Hola"</span>;
+}
+console.<span class="code-func">log</span>(mensaje); <span class="code-comment">// "Hola" - var no respeta el bloque</span></code></pre>            <h4 id="subtema-let">La variable let (recomendada)</h4>            <p>
+              <code>let</code> tiene <strong>alcance de bloque</strong>. Solo es accesible dentro del bloque <code>{}</code> donde se declaro. Ideal para valores que cambian.
+            </p>            <pre class="code-block"><code><span class="code-comment">// let: alcance de bloque (recomendado para valores que cambian)</span>
+<span class="code-keyword">let</span> contador = <span class="code-number">0</span>;
+<span class="code-keyword">let</span> nombreUsuario = <span class="code-string">"Carlos"</span>;
+
+<span class="code-keyword">if</span> (<span class="code-keyword">true</span>) {
+  <span class="code-keyword">let</span> temporal = <span class="code-string">"Solo existe aqui"</span>;
+  console.<span class="code-func">log</span>(temporal); <span class="code-comment">// "Solo existe aqui"</span>
+}
+<span class="code-comment">// console.log(temporal); // ReferenceError</span>
+
+<span class="code-comment">// let permite reasignacion</span>
+contador = <span class="code-number">1</span>;
+contador = <span class="code-number">2</span>; <span class="code-comment">// Perfectamente valido</span></code></pre>            <h4 id="subtema-const">La constante const (recomendada)</h4>            <p>
+              <code>const</code> tiene alcance de bloque pero su valor no puede ser reasignado. Es la forma recomendada por defecto.
+            </p>            <pre class="code-block"><code><span class="code-comment">// const: no reasignable (recomendado por defecto)</span>
+<span class="code-keyword">const</span> PI = <span class="code-number">3.14159</span>;
+<span class="code-keyword">const</span> API_URL = <span class="code-string">"https://api.ejemplo.com"</span>;
+<span class="code-keyword">const</span> MAX_INTENTOS = <span class="code-number">3</span>;
+
+<span class="code-comment">// PI = 3.14; // TypeError: Assignment to constant variable.</span>
+
+<span class="code-comment">// Importante: const no significa "inmutable"</span>
+<span class="code-keyword">const</span> usuario = { nombre: <span class="code-string">"Luis"</span>, edad: <span class="code-number">30</span> };
+usuario.edad = <span class="code-number">31</span>; <span class="code-comment">// Se puede modificar propiedades</span>
+<span class="code-comment">// usuario = {}; // Pero no se puede reasignar la referencia</span></code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Uso incorrecto de var</h4>
+            <pre class="code-block"><code><span class="code-keyword">for</span> (<span class="code-keyword">var</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">3</span>; i++) {
+  <span class="code-func">setTimeout</span>(() =&gt; {
+    console.<span class="code-func">log</span>(i); <span class="code-comment">// Imprime 3, 3, 3</span>
+  }, <span class="code-number">1000</span>);
+}
+<span class="code-comment">// var tiene alcance de funcion, no de bloque</span></code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Uso correcto de let</h4>
+            <pre class="code-block"><code><span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">3</span>; i++) {
+  <span class="code-func">setTimeout</span>(() =&gt; {
+    console.<span class="code-func">log</span>(i); <span class="code-comment">// Imprime 0, 1, 2</span>
+  }, <span class="code-number">1000</span>);
+}
+<span class="code-comment">// let crea una nueva variable en cada iteracion</span></code></pre>
+              </div>
+            </div>            <div class="callout callout-info" role="note">
+              <strong>Regla de oro:</strong> Usa <code>const</code> por defecto. Cambia a <code>let</code> solo cuando necesites reasignar. Nunca uses <code>var</code> en codigo moderno.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio Practico:</strong> Declara variables con <code>const</code> para tu nombre, apellido y edad. Intenta reasignar cada una y observa los errores. Luego crea una variable <code>let</code> para un contador y aumentala de 1 en 1 hasta llegar a 10.
+            </div>          </div>
+        </article>
+        <!-- Leccion 1.2 -->
+        <article class="lesson" id="leccion-1-2" aria-labelledby="leccion-1-2-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-1-2"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-1-2-title">1.2 Tipos de Datos en JavaScript</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              JavaScript es un lenguaje de <strong>tipado dinamico</strong>. El tipo se determina en tiempo de ejecucion. Tiene 8 tipos, divididos en <strong>primitivos</strong> y <strong>no primitivos</strong>.
+            </p>            <h4 id="subtema-primitivos">Tipos Primitivos</h4>            <pre class="code-block"><code><span class="code-comment">// Los tipos primitivos de JavaScript</span>
+<span class="code-keyword">let</span> texto = <span class="code-string">"Hola Mundo"</span>;           <span class="code-comment">// string</span>
+<span class="code-keyword">let</span> entero = <span class="code-number">42</span>;                    <span class="code-comment">// number</span>
+<span class="code-keyword">let</span> decimal = <span class="code-number">3.14</span>;                  <span class="code-comment">// number</span>
+<span class="code-keyword">let</span> verdadero = <span class="code-keyword">true</span>;                <span class="code-comment">// boolean</span>
+<span class="code-keyword">let</span> nada = <span class="code-keyword">null</span>;                    <span class="code-comment">// null</span>
+<span class="code-keyword">let</span> indefinido;                       <span class="code-comment">// undefined</span>
+<span class="code-keyword">let</span> id = <span class="code-number">9007199254740991n</span>;          <span class="code-comment">// bigint</span>
+<span class="code-keyword">let</span> simbolo = <span class="code-func">Symbol</span>(<span class="code-string">"id"</span>);         <span class="code-comment">// symbol</span></code></pre>            <h4 id="subtema-typeof">El operador typeof</h4>            <pre class="code-block"><code><span class="code-comment">// typeof devuelve el tipo como string</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">typeof</span> <span class="code-string">"Hola"</span>);       <span class="code-comment">// "string"</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">typeof</span> <span class="code-number">42</span>);          <span class="code-comment">// "number"</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">typeof</span> <span class="code-keyword">true</span>);        <span class="code-comment">// "boolean"</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">typeof</span> <span class="code-keyword">undefined</span>);   <span class="code-comment">// "undefined"</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">typeof</span> <span class="code-keyword">null</span>);        <span class="code-comment">// "object" (bug historico!)</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">typeof</span> [<span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span>]);    <span class="code-comment">// "object"</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">typeof</span> {});          <span class="code-comment">// "object"</span></code></pre>            <div class="callout callout-warning" role="alert">
+              <strong>Cuidado:</strong> <code>typeof null</code> devuelve <code>"object"</code> en lugar de <code>"null"</code>. Es un bug historico que nunca se corrigio.
+            </div>            <h4>Diferencia entre undefined y null</h4>            <pre class="code-block"><code><span class="code-comment">// undefined: asignado automaticamente por JavaScript</span>
+<span class="code-keyword">let</span> edad;
+console.<span class="code-func">log</span>(edad);           <span class="code-comment">// undefined</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">typeof</span> edad);  <span class="code-comment">// "undefined"</span>
+
+<span class="code-comment">// null: ausencia intencional de valor</span>
+<span class="code-keyword">let</span> resultado = <span class="code-keyword">null</span>;
+console.<span class="code-func">log</span>(resultado);      <span class="code-comment">// null</span>
+
+<span class="code-comment">// Funcion que busca un usuario</span>
+<span class="code-keyword">function</span> <span class="code-func">buscarUsuario</span>(id) {
+  <span class="code-keyword">const</span> usuario = usuarios.<span class="code-func">find</span>(u =&gt; u.id === id);
+  <span class="code-keyword">return</span> usuario || <span class="code-keyword">null</span>; <span class="code-comment">// null si no encontro</span>
+}</code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Confusion con tipos</h4>
+            <pre class="code-block"><code><span class="code-keyword">let</span> precio = <span class="code-string">"100"</span>;  <span class="code-comment">// Es string!</span>
+<span class="code-keyword">let</span> total = precio + <span class="code-number">50</span>;
+console.<span class="code-func">log</span>(total);     <span class="code-comment">// "10050"</span></code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Uso correcto</h4>
+            <pre class="code-block"><code><span class="code-keyword">let</span> precio = <span class="code-number">100</span>;  <span class="code-comment">// number</span>
+<span class="code-keyword">let</span> total = precio + <span class="code-number">50</span>;
+console.<span class="code-func">log</span>(total);     <span class="code-comment">// 150</span></code></pre>
+              </div>
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Crea 8 variables, una de cada tipo primitivo. Usa <code>typeof</code> en cada una. Predice el resultado de <code>"5" - 3</code>, <code>"5" + 3</code>, <code>true + 1</code> y <code>null + 5</code> antes de ejecutarlo.
+            </div>          </div>
+        </article>
+        <!-- Leccion 1.3 -->
+        <article class="lesson" id="leccion-1-3" aria-labelledby="leccion-1-3-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-1-3"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-1-3-title">1.3 Operadores en JavaScript</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Los operadores son simbolos que realizan operaciones sobre valores. JavaScript tiene <strong>aritmeticos</strong>, <strong>asignacion</strong>, <strong>comparacion</strong> y <strong>logicos</strong>.
+            </p>            <h4 id="subtema-aritmeticos">Operadores Aritmeticos</h4>            <pre class="code-block"><code><span class="code-keyword">let</span> a = <span class="code-number">10</span>;
+<span class="code-keyword">let</span> b = <span class="code-number">3</span>;
+
+console.<span class="code-func">log</span>(a + b);   <span class="code-comment">// 13    (suma)</span>
+console.<span class="code-func">log</span>(a - b);   <span class="code-comment">// 7     (resta)</span>
+console.<span class="code-func">log</span>(a * b);   <span class="code-comment">// 30    (multiplicacion)</span>
+console.<span class="code-func">log</span>(a / b);   <span class="code-comment">// 3.333 (division)</span>
+console.<span class="code-func">log</span>(a % b);   <span class="code-comment">// 1     (modulo)</span>
+console.<span class="code-func">log</span>(a ** b);  <span class="code-comment">// 1000  (potencia)</span>
+
+<span class="code-keyword">let</span> contador = <span class="code-number">5</span>;
+contador++;       <span class="code-comment">// 6</span>
+contador--;       <span class="code-comment">// 5</span>
+<span class="code-keyword">let</span> nuevo = ++contador; <span class="code-comment">// pre-incremento</span></code></pre>            <h4 id="subtema-comparacion">Operadores de Comparacion</h4>            <pre class="code-block"><code><span class="code-comment">// == vs === (abstracta vs estricta)</span>
+console.<span class="code-func">log</span>(<span class="code-number">5</span> == <span class="code-string">"5"</span>);     <span class="code-comment">// true  (convierte tipos)</span>
+console.<span class="code-func">log</span>(<span class="code-number">5</span> === <span class="code-string">"5"</span>);    <span class="code-comment">// false (mismos tipos)</span>
+console.<span class="code-func">log</span>(<span class="code-number">0</span> == <span class="code-string">""</span>);      <span class="code-comment">// true  (inesperado)</span>
+console.<span class="code-func">log</span>(<span class="code-number">0</span> === <span class="code-string">""</span>);     <span class="code-comment">// false (correcto)</span>
+
+<span class="code-comment">// != vs !==</span>
+console.<span class="code-func">log</span>(<span class="code-number">5</span> != <span class="code-string">"5"</span>);     <span class="code-comment">// false</span>
+console.<span class="code-func">log</span>(<span class="code-number">5</span> !== <span class="code-string">"5"</span>);    <span class="code-comment">// true</span></code></pre>            <div class="callout callout-warning" role="alert">
+              <strong>Siempre usa === (igualdad estricta):</strong> <code>==</code> convierte tipos antes de comparar, causando resultados inesperados.
+            </div>            <h4 id="subtema-logicos">Operadores Logicos</h4>            <pre class="code-block"><code><span class="code-comment">// AND (&amp;&amp;): ambas deben ser true</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">true</span> &amp;&amp; <span class="code-keyword">true</span>);    <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">true</span> &amp;&amp; <span class="code-keyword">false</span>);   <span class="code-comment">// false</span>
+
+<span class="code-comment">// OR (||): al menos una true</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">true</span> || <span class="code-keyword">false</span>);   <span class="code-comment">// true</span>
+
+<span class="code-comment">// NOT (!): invierte</span>
+console.<span class="code-func">log</span>(!<span class="code-keyword">true</span>);            <span class="code-comment">// false</span>
+
+<span class="code-comment">// Valores por defecto con ||</span>
+<span class="code-keyword">const</span> nombre = <span class="code-string">""</span> || <span class="code-string">"Visitante"</span>;
+console.<span class="code-func">log</span>(nombre);  <span class="code-comment">// "Visitante"</span></code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Usando ==</h4>
+            <pre class="code-block"><code><span class="code-keyword">let</span> edad = <span class="code-string">"0"</span>;
+<span class="code-keyword">if</span> (edad == <span class="code-number">0</span>) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Sin edad"</span>);
+}
+<span class="code-comment">// Se ejecuta porque "0" == 0</span></code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Usando ===</h4>
+            <pre class="code-block"><code><span class="code-keyword">let</span> edad = <span class="code-string">"0"</span>;
+<span class="code-keyword">if</span> (edad === <span class="code-number">0</span>) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Sin edad"</span>);
+}
+<span class="code-comment">// No se ejecuta: string !== number</span></code></pre>
+              </div>
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Resuelve: <code>true &amp;&amp; "hello"</code>, <code>false || 42</code>, <code>!""</code>, <code>0 || "fallback"</code>. Escribe un programa que determine si un numero es par.
+            </div>          </div>
+        </article>
+        <!-- Leccion 1.4 -->
+        <article class="lesson" id="leccion-1-4" aria-labelledby="leccion-1-4-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-1-4"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-1-4-title">1.4 Strings: Manipulacion de Texto</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Los <strong>strings</strong> se crean con comillas simples, dobles o backticks. Tienen metodos incorporados para manipular texto.
+            </p>            <h4 id="subtema-creacion">Creacion de Strings</h4>            <pre class="code-block"><code><span class="code-comment">// Tres formas de crear strings</span>
+<span class="code-keyword">const</span> str1 = <span class="code-string">"Hola con comillas dobles"</span>;
+<span class="code-keyword">const</span> str2 = <span class="code-string">'Hola con comillas simples'</span>;
+<span class="code-keyword">const</span> str3 = <span class="code-string">`Hola con backticks`</span>;
+
+<span class="code-comment">// Backticks: interpolacion y multil&#786;nea</span>
+<span class="code-keyword">const</span> nombre = <span class="code-string">"Mundo"</span>;
+<span class="code-keyword">const</span> saludo = <span class="code-string">`Hola </span><span class="code-keyword">${</span>nombre<span class="code-keyword">}</span><span class="code-string">!`</span>;
+console.<span class="code-func">log</span>(saludo);  <span class="code-comment">// "Hola Mundo!"</span></code></pre>            <h4 id="subtema-metodos">Metodos de String</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> texto = <span class="code-string">"JavaScript es increible"</span>;
+
+console.<span class="code-func">log</span>(texto.length);           <span class="code-comment">// 22</span>
+console.<span class="code-func">log</span>(texto.<span class="code-func">toUpperCase</span>());    <span class="code-comment">// "JAVASCRIPT ES INCREIBLE"</span>
+console.<span class="code-func">log</span>(texto.<span class="code-func">toLowerCase</span>());    <span class="code-comment">// "javascript es increible"</span>
+console.<span class="code-func">log</span>(texto.<span class="code-func">includes</span>(<span class="code-string">"Script"</span>));  <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(texto.<span class="code-func">indexOf</span>(<span class="code-string">"es"</span>));      <span class="code-comment">// 11</span>
+console.<span class="code-func">log</span>(texto.<span class="code-func">startsWith</span>(<span class="code-string">"Java"</span>)); <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(texto.<span class="code-func">endsWith</span>(<span class="code-string">"ble"</span>));   <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(texto.<span class="code-func">slice</span>(<span class="code-number">0</span>, <span class="code-number">10</span>));      <span class="code-comment">// "JavaScript"</span>
+console.<span class="code-func">log</span>(texto.<span class="code-func">slice</span>(<span class="code-number">-9</span>));          <span class="code-comment">// "increible"</span></code></pre>            <h4>Busqueda y Reemplazo</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> mensaje = <span class="code-string">"Me gusta Python y JavaScript"</span>;
+
+console.<span class="code-func">log</span>(mensaje.<span class="code-func">replace</span>(<span class="code-string">"Python"</span>, <span class="code-string">"JS"</span>));
+<span class="code-comment">// "Me gusta JS y JavaScript"</span>
+
+<span class="code-keyword">const</span> todos = <span class="code-string">"aabbcc"</span>.<span class="code-func">replaceAll</span>(<span class="code-string">"a"</span>, <span class="code-string">"x"</span>);
+console.<span class="code-func">log</span>(todos);  <span class="code-comment">// "xxbbcc"</span>
+
+<span class="code-keyword">const</span> csv = <span class="code-string">"manzana,pera,banana"</span>;
+<span class="code-keyword">const</span> frutas = csv.<span class="code-func">split</span>(<span class="code-string">","</span>);
+console.<span class="code-func">log</span>(frutas);  <span class="code-comment">// ["manzana", "pera", "banana"]</span>
+
+<span class="code-keyword">const</span> unido = frutas.<span class="code-func">join</span>(<span class="code-string">" - "</span>);
+console.<span class="code-func">log</span>(unido);   <span class="code-comment">// "manzana - pera - banana"</span></code></pre>            <div class="callout callout-info" role="note">
+              <strong>Inmutabilidad:</strong> Los strings son <strong>inmutables</strong>. <code>toUpperCase()</code> devuelve un nuevo string, no modifica el original.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Escribe una funcion que reciba un nombre completo y devuelva: (1) en mayusculas, (2) iniciales por puntos, (3) longitud, (4) apellido en reversa.
+            </div>          </div>
+        </article>
+        <!-- Leccion 1.5 -->
+        <article class="lesson" id="leccion-1-5" aria-labelledby="leccion-1-5-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-1-5"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-1-5-title">1.5 Numbers y Operaciones Numericas</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Todos los numeros en JavaScript son del tipo <code>number</code> (IEEE 754 doble precision). No hay distincion entre int y float.
+            </p>            <h4 id="subtema-numericos">Valores Especiales</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> inf = <span class="code-number">Infinity</span>;       <span class="code-comment">// Infinity</span>
+<span class="code-keyword">const</span> nInf = <span class="code-number">-Infinity</span>;      <span class="code-comment">// -Infinity</span>
+<span class="code-keyword">const</span> nan = <span class="code-number">NaN</span>;              <span class="code-comment">// NaN (Not a Number)</span>
+
+<span class="code-comment">// NaN aparece con operaciones invalidas</span>
+console.<span class="code-func">log</span>(<span class="code-string">"hola"</span> * <span class="code-number">2</span>);      <span class="code-comment">// NaN</span>
+console.<span class="code-func">log</span>(<span class="code-number">0</span> / <span class="code-number">0</span>);            <span class="code-comment">// NaN</span>
+
+<span class="code-comment">// Verificar NaN</span>
+console.<span class="code-func">log</span>(<span class="code-number">Number</span>.<span class="code-func">isNaN</span>(<span class="code-number">NaN</span>));  <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(<span class="code-number">NaN</span> === <span class="code-number">NaN</span>);            <span class="code-comment">// false (por diseno)</span></code></pre>            <h4 id="subtema-conversion">Conversion de Numeros</h4>            <pre class="code-block"><code>console.<span class="code-func">log</span>(<span class="code-func">Number</span>(<span class="code-string">"42"</span>));        <span class="code-comment">// 42</span>
+console.<span class="code-func">log</span>(<span class="code-func">Number</span>(<span class="code-string">"3.14"</span>));      <span class="code-comment">// 3.14</span>
+console.<span class="code-func">log</span>(<span class="code-func">Number</span>(<span class="code-string">""</span>));           <span class="code-comment">// 0</span>
+console.<span class="code-func">log</span>(<span class="code-func">Number</span>(<span class="code-string">"hola"</span>));       <span class="code-comment">// NaN</span>
+
+console.<span class="code-func">log</span>(<span class="code-func">parseInt</span>(<span class="code-string">"42.9"</span>));     <span class="code-comment">// 42 (trunca)</span>
+console.<span class="code-func">log</span>(<span class="code-func">parseInt</span>(<span class="code-string">"100px"</span>));     <span class="code-comment">// 100</span>
+console.<span class="code-func">log</span>(<span class="code-func">parseFloat</span>(<span class="code-string">"3.14abc"</span>)); <span class="code-comment">// 3.14</span>
+
+console.<span class="code-func">log</span>(+<span class="code-string">"42"</span>);    <span class="code-comment">// 42 (operador unary)</span></code></pre>            <h4>Metodos de Numero</h4>            <pre class="code-block"><code>console.<span class="code-func">log</span>(<span class="code-number">Math</span>.<span class="code-func">round</span>(<span class="code-number">4.5</span>));     <span class="code-comment">// 5</span>
+console.<span class="code-func">log</span>(<span class="code-number">Math</span>.<span class="code-func">ceil</span>(<span class="code-number">4.1</span>));      <span class="code-comment">// 5 (hacia arriba)</span>
+console.<span class="code-func">log</span>(<span class="code-number">Math</span>.<span class="code-func">floor</span>(<span class="code-number">4.9</span>));     <span class="code-comment">// 4 (hacia abajo)</span>
+
+console.<span class="code-func">log</span>((<span class="code-number">19.995</span>).<span class="code-func">toFixed</span>(<span class="code-number">2</span>));  <span class="code-comment">// "20.00" (string!)</span>
+
+console.<span class="code-func">log</span>(<span class="code-number">Math</span>.<span class="code-func">random</span>());        <span class="code-comment">// 0.0 - 1.0</span>
+<span class="code-keyword">const</span> dado = <span class="code-number">Math</span>.<span class="code-func">floor</span>(<span class="code-number">Math</span>.<span class="code-func">random</span>() * <span class="code-number">6</span>) + <span class="code-number">1</span>;
+console.<span class="code-func">log</span>(dado);                 <span class="code-comment">// 1 - 6</span>
+
+console.<span class="code-func">log</span>(<span class="code-number">Math</span>.<span class="code-func">min</span>(<span class="code-number">5</span>, <span class="code-number">3</span>, <span class="code-number">8</span>, <span class="code-number">1</span>));  <span class="code-comment">// 1</span>
+console.<span class="code-func">log</span>(<span class="code-number">Math</span>.<span class="code-func">max</span>(<span class="code-number">5</span>, <span class="code-number">3</span>, <span class="code-number">8</span>, <span class="code-number">1</span>));  <span class="code-comment">// 8</span></code></pre>            <div class="callout callout-warning" role="alert">
+              <strong>Precision:</strong> <code>0.1 + 0.2</code> no es exactamente <code>0.3</code>. El resultado es <code>0.30000000000000004</code> por IEEE 754.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Juego de adivinanza: numero aleatorio 1-100, 5 intentos, mostrar "mayor"/"menor", contar intentos.
+            </div>          </div>
+        </article>
+        <!-- Leccion 1.6 -->
+        <article class="lesson" id="leccion-1-6" aria-labelledby="leccion-1-6-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-1-6"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-1-6-title">1.6 Booleans, null y undefined</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Los <strong>booleans</strong> solo tienen <code>true</code> y <code>false</code>. JavaScript tiene <strong>truthy</strong> y <strong>falsy</strong>.
+            </p>            <h4 id="subtema-truthy">Valores Truthy y Falsy</h4>            <pre class="code-block"><code><span class="code-comment">// Solo estos 8 valores son falsy</span>
+console.<span class="code-func">log</span>(<span class="code-func">Boolean</span>(<span class="code-keyword">false</span>));       <span class="code-comment">// false</span>
+console.<span class="code-func">log</span>(<span class="code-func">Boolean</span>(<span class="code-number">0</span>));             <span class="code-comment">// false</span>
+console.<span class="code-func">log</span>(<span class="code-func">Boolean</span>(<span class="code-number">0n</span>));            <span class="code-comment">// false (BigInt cero)</span>
+console.<span class="code-func">log</span>(<span class="code-func">Boolean</span>(<span class="code-string">""</span>));            <span class="code-comment">// false (string vacio)</span>
+console.<span class="code-func">log</span>(<span class="code-func">Boolean</span>(<span class="code-keyword">null</span>));          <span class="code-comment">// false</span>
+console.<span class="code-func">log</span>(<span class="code-func">Boolean</span>(<span class="code-keyword">undefined</span>));     <span class="code-comment">// false</span>
+console.<span class="code-func">log</span>(<span class="code-func">Boolean</span>(<span class="code-number">NaN</span>));            <span class="code-comment">// false</span>
+
+<span class="code-comment">// Todo lo demas es truthy</span>
+console.<span class="code-func">log</span>(<span class="code-func">Boolean</span>(<span class="code-string">"0"</span>));    <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(<span class="code-func">Boolean</span>([]));     <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(<span class="code-func">Boolean</span>({}));     <span class="code-comment">// true</span></code></pre>            <h4 id="subtema-null-undefined">null vs undefined</h4>            <pre class="code-block"><code><span class="code-comment">// undefined: asignado automaticamente</span>
+<span class="code-keyword">let</span> nombre;
+console.<span class="code-func">log</span>(nombre);           <span class="code-comment">// undefined</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">typeof</span> nombre);  <span class="code-comment">// "undefined"</span>
+
+<span class="code-comment">// null: ausencia intencional de valor</span>
+<span class="code-keyword">let</span> usuario = <span class="code-keyword">null</span>;
+console.<span class="code-func">log</span>(usuario);          <span class="code-comment">// null</span>
+console.<span class="code-func">log</span>(<span class="code-keyword">typeof</span> usuario);   <span class="code-comment">// "object" (bug)</span>
+
+<span class="code-comment">// Verificar correctamente</span>
+console.<span class="code-func">log</span>(usuario === <span class="code-keyword">null</span>); <span class="code-comment">// true</span></code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Confusion truthy/falsy</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> edad = <span class="code-string">"0"</span>;
+<span class="code-keyword">if</span> (edad) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Tiene edad"</span>);
+}
+<span class="code-comment">// "0" es truthy!</span></code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Comparacion explicita</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> edad = <span class="code-string">"0"</span>;
+<span class="code-keyword">if</span> (edad !== <span class="code-keyword">undefined</span> &amp;&amp; edad !== <span class="code-string">""</span>) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Tiene edad"</span>);
+}</code></pre>
+              </div>
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Escribe <code>esValido(valor)</code> que retorne <code>true</code> si no es null, undefined, string vacio o NaN.
+            </div>          </div>
+        </article>
+        <!-- Leccion 1.7 -->
+        <article class="lesson" id="leccion-1-7" aria-labelledby="leccion-1-7-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-1-7"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-1-7-title">1.7 Type Coercion: Conversion Automatica</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              <strong>Type coercion</strong> es la conversion implicita de tipos que JavaScript hace durante operaciones.
+            </p>            <h4 id="subtema-implicita">Coercion Explicita vs Implicita</h4>            <pre class="code-block"><code><span class="code-comment">// EXPLICITA: tu haces la conversion</span>
+<span class="code-keyword">const</span> num = <span class="code-func">Number</span>(<span class="code-string">"42"</span>);    <span class="code-comment">// 42</span>
+<span class="code-keyword">const</span> str = <span class="code-func">String</span>(<span class="code-number">42</span>);        <span class="code-comment">// "42"</span>
+<span class="code-keyword">const</span> bool = <span class="code-func">Boolean</span>(<span class="code-number">1</span>);       <span class="code-comment">// true</span>
+
+<span class="code-comment">// IMPLICITA: JavaScript lo hace solo</span>
+console.<span class="code-func">log</span>(<span class="code-string">"5"</span> - <span class="code-number">2</span>);     <span class="code-comment">// 3  (string a number)</span>
+console.<span class="code-func">log</span>(<span class="code-string">"5"</span> + <span class="code-number">2</span>);     <span class="code-comment">// "52" (concatenacion!)</span>
+console.<span class="code-func">log</span>(<span class="code-string">"5"</span> * <span class="code-number">2</span>);     <span class="code-comment">// 10 (string a number)</span></code></pre>            <div class="callout callout-warning" role="alert">
+              <strong>El + es especial:</strong> Con un string, <code>+</code> concatena. <code>"5" + 2</code> es <code>"52"</code>, no <code>7</code>.
+            </div>            <h4 id="subtema-comparaciones">Coercion en Comparaciones</h4>            <pre class="code-block"><code><span class="code-comment">// == convierte tipos</span>
+console.<span class="code-func">log</span>(<span class="code-number">1</span> == <span class="code-string">"1"</span>);       <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(<span class="code-number">0</span> == <span class="code-string">""</span>);        <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(<span class="code-number">0</span> == <span class="code-keyword">false</span>);     <span class="code-comment">// true</span>
+
+<span class="code-comment">// === NO convierte</span>
+console.<span class="code-func">log</span>(<span class="code-number">1</span> === <span class="code-string">"1"</span>);      <span class="code-comment">// false</span>
+console.<span class="code-func">log</span>(<span class="code-number">0</span> === <span class="code-string">""</span>);       <span class="code-comment">// false</span>
+console.<span class="code-func">log</span>(<span class="code-number">0</span> === <span class="code-keyword">false</span>);    <span class="code-comment">// false</span></code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Inesperados con ==</h4>
+            <pre class="code-block"><code>console.<span class="code-func">log</span>(<span class="code-string">""</span> == <span class="code-keyword">false</span>);   <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(<span class="code-string">"0"</span> == <span class="code-keyword">false</span>);  <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>([] == <span class="code-keyword">false</span>);   <span class="code-comment">// true</span></code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Seguros con ===</h4>
+            <pre class="code-block"><code>console.<span class="code-func">log</span>(<span class="code-string">""</span> === <span class="code-keyword">false</span>);  <span class="code-comment">// false</span>
+console.<span class="code-func">log</span>(<span class="code-string">"0"</span> === <span class="code-keyword">false</span>); <span class="code-comment">// false</span>
+console.<span class="code-func">log</span>([] === <span class="code-keyword">false</span>);  <span class="code-comment">// false</span></code></pre>
+              </div>
+            </div>            <h4>Tabla de Conversion a Number</h4>            <pre class="code-block"><code>console.<span class="code-func">log</span>(<span class="code-func">Number</span>(<span class="code-string">"42"</span>));          <span class="code-comment">// 42</span>
+console.<span class="code-func">log</span>(<span class="code-func">Number</span>(<span class="code-string">""</span>));             <span class="code-comment">// 0</span>
+console.<span class="code-func">log</span>(<span class="code-func">Number</span>(<span class="code-keyword">true</span>));           <span class="code-comment">// 1</span>
+console.<span class="code-func">log</span>(<span class="code-func">Number</span>(<span class="code-keyword">false</span>));          <span class="code-comment">// 0</span>
+console.<span class="code-func">log</span>(<span class="code-func">Number</span>(<span class="code-keyword">null</span>));           <span class="code-comment">// 0</span>
+console.<span class="code-func">log</span>(<span class="code-func">Number</span>(<span class="code-keyword">undefined</span>));      <span class="code-comment">// NaN</span></code></pre>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Predice: <code>"10" - 5</code>, <code>"10" + 5</code>, <code>true + 1</code>, <code>false + ""</code>, <code>null + 1</code>, <code>undefined + 1</code>. Crea <code>convertirEdad(edad)</code>.
+            </div>          </div>
+        </article>
+        <!-- Leccion 1.8 -->
+        <article class="lesson" id="leccion-1-8" aria-labelledby="leccion-1-8-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-1-8"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-1-8-title">1.8 Template Literals y Console Debugging</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Los <strong>template literals</strong> usan backticks y permiten interpolacion, strings multil&#786;nea y expresiones.
+            </p>            <h4 id="subtema-interpolacion">Interpolacion de Variables</h4>            <pre class="code-block"><code><span class="code-comment">// Antes de ES6</span>
+<span class="code-keyword">const</span> nombre = <span class="code-string">"Ana"</span>;
+<span class="code-keyword">const</span> msg = <span class="code-string">"Hola "</span> + nombre + <span class="code-string">", tienes 25 anios"</span>;
+
+<span class="code-comment">// Con ES6: template literals</span>
+<span class="code-keyword">const</span> msg2 = <span class="code-string">`Hola </span><span class="code-keyword">${</span>nombre<span class="code-keyword">}</span><span class="code-string">, tienes </span><span class="code-keyword">${</span><span class="code-number">25</span><span class="code-keyword">}</span><span class="code-string"> anios`</span>;
+
+<span class="code-comment">// Expresiones en ${}</span>
+<span class="code-keyword">const</span> precio = <span class="code-number">150</span>;
+<span class="code-keyword">const</span> total = <span class="code-string">`Total: $</span><span class="code-keyword">${</span>precio * <span class="code-number">1.19</span><span class="code-keyword">}</span><span class="code-string">`</span>;
+console.<span class="code-func">log</span>(total);  <span class="code-comment">// "Total: $178.5"</span>
+
+<span class="code-comment">// Funciones en ${}</span>
+console.<span class="code-func">log</span>(<span class="code-string">`</span><span class="code-keyword">${</span><span class="code-string">"mundo"</span>.<span class="code-func">toUpperCase</span>()<span class="code-keyword">}</span><span class="code-string">!`</span>);  <span class="code-comment">// "MUNDO!"</span></code></pre>            <h4 id="subtema-multilinea">Strings Multil&#786;nea</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> usuarios = [<span class="code-string">"Ana"</span>, <span class="code-string">"Luis"</span>, <span class="code-string">"Carlos"</span>];
+<span class="code-keyword">const</span> lista = <span class="code-string">`
+  &lt;ul&gt;
+    </span><span class="code-keyword">${</span>usuarios.<span class="code-func">map</span>(u =&gt; <span class="code-string">`&lt;li&gt;</span><span class="code-keyword">${</span>u<span class="code-keyword">}</span><span class="code-string">&lt;/li&gt;`</span>).<span class="code-func">join</span>(<span class="code-string">"\n    "</span>)<span class="code-keyword">}</span><span class="code-string">
+  &lt;/ul&gt;
+`</span>;
+console.<span class="code-func">log</span>(lista);</code></pre>            <h4 id="subtema-console">Metodos de Console</h4>            <pre class="code-block"><code><span class="code-comment">// console.log: basico</span>
+console.<span class="code-func">log</span>({ nombre: <span class="code-string">"Pedro"</span>, edad: <span class="code-number">30</span> });
+
+<span class="code-comment">// console.table: tabla</span>
+<span class="code-keyword">const</span> productos = [
+  { nombre: <span class="code-string">"Laptop"</span>, precio: <span class="code-number">999</span> },
+  { nombre: <span class="code-string">"Mouse"</span>, precio: <span class="code-number">25</span> }
+];
+console.<span class="code-func">table</span>(productos);
+
+<span class="code-comment">// console.group: agrupar</span>
+console.<span class="code-func">group</span>(<span class="code-string">"Config"</span>);
+console.<span class="code-func">log</span>(<span class="code-string">"Tema: oscuro"</span>);
+console.<span class="code-func">groupEnd</span>();
+
+<span class="code-comment">// console.time: medir tiempo</span>
+console.<span class="code-func">time</span>(<span class="code-string">"bucle"</span>);
+<span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">1000000</span>; i++) {}
+console.<span class="code-func">timeEnd</span>(<span class="code-string">"bucle"</span>);
+
+console.<span class="code-func">warn</span>(<span class="code-string">"Version deprecada"</span>);
+console.<span class="code-func">error</span>(<span class="code-string">"Error de conexion"</span>);</code></pre>            <div class="callout callout-info" role="note">
+              <strong>Tip:</strong> Usa <code>console.table()</code> para inspeccionar arrays de objetos. Filtra columnas: <code>console.table(data, ['name', 'price'])</code>.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Crea <code>generarTabla(nombre, col1, col2, filas)</code> que devuelva una tabla formateada con template literals.
+            </div>          </div>
+        </article>
+      </div>
+      <div class="module-next-bar">
+        <h3>Siguiente: Modulo 2 &mdash; Estructuras de Control</h3>
+        <p>Continua tu aprendizaje con el siguiente modulo</p>
+        <button class="btn btn-primary module-next-btn" data-next="2">Siguiente Modulo &rarr;</button>
+      </div>
+    </section>
+    <!-- MODULO 2: ESTRUCTURAS DE CONTROL -->
+    <section class="module" id="modulo-2" aria-labelledby="modulo-2-title">
+      <div class="container">
+        <div class="module-progress-header">
+          <span class="module-progress-label">Modulo 2 &mdash; 0/8 lecciones</span>
+          <div class="progress-bar-container"><div class="progress-fill" style="width:0%"></div></div>
+          <button class="module-back-btn" type="button" onclick="document.body.classList.remove('course-mode'); document.querySelectorAll('.module[id]').forEach(function(m){m.classList.remove('active-module')}); window.scrollTo(0,0);">Volver al inicio</button>
+        </div>
+        <header class="module-header">
+          <span class="module-badge">Modulo 02</span>
+          <h2 class="section-title" id="modulo-2-title">Estructuras de Control</h2>
+          <p class="module-desc">
+            Las estructuras de control determinan el flujo de ejecucion de tu programa.
+            Aprenderas a tomar decisiones con condicionales y a repetir acciones con bucles.
+          </p>
+        </header>
+        <!-- Leccion 2.1 -->
+        <article class="lesson" id="leccion-2-1" aria-labelledby="leccion-2-1-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-2-1"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-2-1-title">2.1 Condicionales: if, else if, else</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              La sentencia <code>if</code> ejecuta un bloque de codigo si una condicion es <strong>truthy</strong>. Puedes encadenar <code>else if</code> y <code>else</code> para manejar multiples caminos.
+            </p>            <h4 id="subtema-basico">Estructura Basica</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> edad = <span class="code-number">18</span>;
+
+<span class="code-keyword">if</span> (edad &gt;= <span class="code-number">18</span>) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Eres mayor de edad"</span>);
+} <span class="code-keyword">else</span> {
+  console.<span class="code-func">log</span>(<span class="code-string">"Eres menor de edad"</span>);
+}
+<span class="code-comment">// "Eres mayor de edad"</span></code></pre>            <h4 id="subtema-encadenado">Encadenar multiples condiciones</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> nota = <span class="code-number">75</span>;
+
+<span class="code-keyword">if</span> (nota &gt;= <span class="code-number">90</span>) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Excelente"</span>);
+} <span class="code-keyword">else if</span> (nota &gt;= <span class="code-number">70</span>) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Bueno"</span>);
+} <span class="code-keyword">else if</span> (nota &gt;= <span class="code-number">50</span>) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Regular"</span>);
+} <span class="code-keyword">else</span> {
+  console.<span class="code-func">log</span>(<span class="code-string">"Reprobado"</span>);
+}
+<span class="code-comment">// "Bueno"</span></code></pre>            <h4>Combinar condiciones con && y ||</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> usuario = { activo: <span class="code-keyword">true</span>, admin: <span class="code-keyword">false</span> };
+
+<span class="code-keyword">if</span> (usuario.activo &amp;&amp; usuario.admin) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Admin activo"</span>);
+} <span class="code-keyword">else if</span> (usuario.activo || usuario.admin) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Activo o admin"</span>);
+} <span class="code-keyword">else</span> {
+  console.<span class="code-func">log</span>(<span class="code-string">"Sin acceso"</span>);
+}
+<span class="code-comment">// "Activo o admin"</span></code></pre>            <div class="callout callout-warning" role="alert">
+              <strong>Cuidado con la negacion:</strong> <code>!usuario.activo && !usuario.admin</code> es dificil de leer. Prefiere <code>!(usuario.activo || usuario.admin)</code>.
+            </div>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Asignacion accidental</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> x = <span class="code-number">0</span>;
+<span class="code-keyword">if</span> (x = <span class="code-number">5</span>) {  <span class="code-comment">// Asignacion, no comparacion!</span>
+  console.<span class="code-func">log</span>(<span class="code-string">"Siempre ejecuta"</span>);
+}</code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Comparacion estricta</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> x = <span class="code-number">0</span>;
+<span class="code-keyword">if</span> (x === <span class="code-number">5</span>) {
+  console.<span class="code-func">log</span>(<span class="code-string">"Solo si x es 5"</span>);
+}</code></pre>
+              </div>
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Escribe <code>clasificarEdad(edad)</code> que retorne "nino", "adolescente", "adulto" o "adulto mayor".
+            </div>          </div>
+        </article>
+        <!-- Leccion 2.2 -->
+        <article class="lesson" id="leccion-2-2" aria-labelledby="leccion-2-2-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-2-2"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-2-2-title">2.2 Sentencia switch</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              <code>switch</code> evalua una expresion y ejecuta el caso que coincida. Cada caso requiere <code>break</code>.
+            </p>            <h4>Uso Basico</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> dia = <span class="code-string">"lunes"</span>;
+
+<span class="code-keyword">switch</span> (dia) {
+  <span class="code-keyword">case</span> <span class="code-string">"lunes"</span>:
+  <span class="code-keyword">case</span> <span class="code-string">"martes"</span>:
+  <span class="code-keyword">case</span> <span class="code-string">"miercoles"</span>:
+  <span class="code-keyword">case</span> <span class="code-string">"jueves"</span>:
+  <span class="code-keyword">case</span> <span class="code-string">"viernes"</span>:
+    console.<span class="code-func">log</span>(<span class="code-string">"Dia laboral"</span>);
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">case</span> <span class="code-string">"sabado"</span>:
+  <span class="code-keyword">case</span> <span class="code-string">"domingo"</span>:
+    console.<span class="code-func">log</span>(<span class="code-string">"Fin de semana"</span>);
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">default</span>:
+    console.<span class="code-func">log</span>(<span class="code-string">"Dia invalido"</span>);
+}</code></pre>            <div class="callout callout-warning" role="alert">
+              <strong>No olvides break:</strong> Sin <code>break</code>, el switch "cae" al siguiente caso (fall-through). A veces util, pero usualmente un error.
+            </div>            <h4>Switch con expresiones</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> hora = <span class="code-number">14</span>;
+
+<span class="code-keyword">switch</span> (<span class="code-keyword">true</span>) {
+  <span class="code-keyword">case</span> (hora &lt; <span class="code-number">12</span>):
+    console.<span class="code-func">log</span>(<span class="code-string">"Buenos dias"</span>);
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">case</span> (hora &lt; <span class="code-number">18</span>):
+    console.<span class="code-func">log</span>(<span class="code-string">"Buenas tardes"</span>);
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">default</span>:
+    console.<span class="code-func">log</span>(<span class="code-string">"Buenas noches"</span>);
+}</code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Sin break</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> tipo = <span class="code-string">"admin"</span>;
+<span class="code-keyword">switch</span> (tipo) {
+  <span class="code-keyword">case</span> <span class="code-string">"admin"</span>:
+    console.<span class="code-func">log</span>(<span class="code-string">"Admin"</span>);
+  <span class="code-keyword">case</span> <span class="code-string">"user"</span>:   <span class="code-comment">// fall-through!</span>
+    console.<span class="code-func">log</span>(<span class="code-string">"User"</span>);
+}</code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Con break</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> tipo = <span class="code-string">"admin"</span>;
+<span class="code-keyword">switch</span> (tipo) {
+  <span class="code-keyword">case</span> <span class="code-string">"admin"</span>:
+    console.<span class="code-func">log</span>(<span class="code-string">"Admin"</span>);
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">case</span> <span class="code-string">"user"</span>:
+    console.<span class="code-func">log</span>(<span class="code-string">"User"</span>);
+    <span class="code-keyword">break</span>;
+}</code></pre>
+              </div>
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Crea <code>calcularOperacion(a, b, operador)</code> con switch que soporte +, -, *, /, %. Incluye validacion de division por cero.
+            </div>          </div>
+        </article>
+        <!-- Leccion 2.3 -->
+        <article class="lesson" id="leccion-2-3" aria-labelledby="leccion-2-3-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-2-3"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-2-3-title">2.3 Operador Ternario</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              El operador ternario es un <code>if/else</code> en una linea: <code>condicion ? valorSiTrue : valorSiFalse</code>.
+            </p>            <h4>Sintaxis basica</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> edad = <span class="code-number">20</span>;
+<span class="code-keyword">const</span> estado = edad &gt;= <span class="code-number">18</span> ? <span class="code-string">"adulto"</span> : <span class="code-string">"menor"</span>;
+console.<span class="code-func">log</span>(estado);  <span class="code-comment">// "adulto"</span>
+
+<span class="code-comment">// Es equivalente a:</span>
+<span class="code-keyword">let</span> estado2;
+<span class="code-keyword">if</span> (edad &gt;= <span class="code-number">18</span>) {
+  estado2 = <span class="code-string">"adulto"</span>;
+} <span class="code-keyword">else</span> {
+  estado2 = <span class="code-string">"menor"</span>;
+}</code></pre>            <h4>Ternarios anidados</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> nota = <span class="code-number">85</span>;
+<span class="code-keyword">const</span> resultado = nota &gt;= <span class="code-number">90</span> ? <span class="code-string">"A"</span>
+  : nota &gt;= <span class="code-number">80</span> ? <span class="code-string">"B"</span>
+  : nota &gt;= <span class="code-number">70</span> ? <span class="code-string">"C"</span>
+  : <span class="code-string">"F"</span>;
+console.<span class="code-func">log</span>(resultado);  <span class="code-comment">// "B"</span></code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Ternarios complejos</h4>
+            <pre class="code-block"><code><span class="code-comment">// Dificil de leer</span>
+<span class="code-keyword">const</span> x = a &gt; b ? (c &gt; d ? e : f) : (g ? h : i);</code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; if/else para logica compleja</h4>
+            <pre class="code-block"><code><span class="code-comment">// Mejor: if/else para logica compleja</span>
+<span class="code-keyword">let</span> x;
+<span class="code-keyword">if</span> (a &gt; b) {
+  x = c &gt; d ? e : f;
+} <span class="code-keyword">else</span> {
+  x = g ? h : i;
+}</code></pre>
+              </div>
+            </div>            <div class="callout callout-info" role="note">
+              <strong>Regla:</strong> Usa ternarios para decisiones simples en una linea. Para logica compleja, usa <code>if/else</code>.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Escribe <code>saludo(nombre, hora)</code> con ternario que retorne "Buenos dias", "Buenas tardes" o "Buenas noches".
+            </div>          </div>
+        </article>
+        <!-- Leccion 2.4 -->
+        <article class="lesson" id="leccion-2-4" aria-labelledby="leccion-2-4-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-2-4"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-2-4-title">2.4 Bucle for clasico</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              El bucle <code>for</code> repite un bloque un numero determinado de veces.
+            </p>            <h4>Estructura del for</h4>            <pre class="code-block"><code><span class="code-comment">// for (inicio; condicion; incremento)</span>
+<span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">5</span>; i++) {
+  console.<span class="code-func">log</span>(i);
+}
+<span class="code-comment">// 0, 1, 2, 3, 4</span></code></pre>            <h4>Patrones comunes</h4>            <pre class="code-block"><code><span class="code-comment">// Contar hacia atras</span>
+<span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">10</span>; i &gt;= <span class="code-number">0</span>; i -= <span class="code-number">2</span>) {
+  console.<span class="code-func">log</span>(i);  <span class="code-comment">// 10, 8, 6, 4, 2, 0</span>
+}
+
+<span class="code-comment">// Multiplicar</span>
+<span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">1</span>; i &lt;= <span class="code-number">10</span>; i++) {
+  console.<span class="code-func">log</span>(<span class="code-string">`5 x </span><span class="code-keyword">${</span>i<span class="code-keyword">}</span><span class="code-string"> = </span><span class="code-keyword">${</span><span class="code-number">5</span> * i<span class="code-keyword">}</span><span class="code-string">`</span>);
+}</code></pre>            <div class="callout callout-warning" role="alert">
+              <strong>Evita var en for:</strong> Usa <code>let</code> para evitar problemas de alcance con closures y callbacks como <code>setTimeout</code>.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Escribe un bucle que imprima todos los numeros pares del 1 al 50. Luego uno que imprima los multiplos de 3.
+            </div>          </div>
+        </article>
+        <!-- Leccion 2.5 -->
+        <article class="lesson" id="leccion-2-5" aria-labelledby="leccion-2-5-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-2-5"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-2-5-title">2.5 Bucles while y do-while</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Los bucles <code>while</code> y <code>do-while</code> repiten mientras la condicion sea truthy.
+            </p>            <h4>while basico</h4>            <pre class="code-block"><code><span class="code-keyword">let</span> contador = <span class="code-number">0</span>;
+<span class="code-keyword">while</span> (contador &lt; <span class="code-number">5</span>) {
+  console.<span class="code-func">log</span>(contador);
+  contador++;
+}
+<span class="code-comment">// 0, 1, 2, 3, 4</span></code></pre>            <h4>do-while: ejecuta al menos una vez</h4>            <pre class="code-block"><code><span class="code-keyword">let</span> intento = <span class="code-number">0</span>;
+<span class="code-keyword">do</span> {
+  intento++;
+  console.<span class="code-func">log</span>(<span class="code-string">`Intento </span><span class="code-keyword">${</span>intento<span class="code-keyword">}</span><span class="code-string">`</span>);
+} <span class="code-keyword">while</span> (intento &lt; <span class="code-number">3</span>);</code></pre>            <h4>Ejemplo practico: juego</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> secreto = <span class="code-number">42</span>;
+<span class="code-keyword">let</span> intentos = <span class="code-number">0</span>;
+<span class="code-keyword">let</span> adivinado = <span class="code-keyword">false</span>;
+
+<span class="code-keyword">while</span> (!adivinado &amp;&amp; intentos &lt; <span class="code-number">3</span>) {
+  intentos++;
+  <span class="code-keyword">const</span> intento = <span class="code-number">Math</span>.<span class="code-func">floor</span>(<span class="code-number">Math</span>.<span class="code-func">random</span>() * <span class="code-number">100</span>);
+  <span class="code-keyword">if</span> (intento === secreto) {
+    adivinado = <span class="code-keyword">true</span>;
+  }
+}</code></pre>            <div class="callout callout-warning" role="alert">
+              <strong>Cuidado con el bucle infinito:</strong> Si la condicion nunca es falsa, el programa se cuelga. Siempre asegurate que la variable de control cambie.
+            </div>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Bucle infinito</h4>
+            <pre class="code-block"><code><span class="code-keyword">let</span> i = <span class="code-number">0</span>;
+<span class="code-keyword">while</span> (i &lt; <span class="code-number">5</span>) {
+  console.<span class="code-func">log</span>(i);
+  <span class="code-comment">// Olvide incrementar i!</span>
+}</code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Incremento correcto</h4>
+            <pre class="code-block"><code><span class="code-keyword">let</span> i = <span class="code-number">0</span>;
+<span class="code-keyword">while</span> (i &lt; <span class="code-number">5</span>) {
+  console.<span class="code-func">log</span>(i);
+  i++;  <span class="code-comment">// Siempre incrementa</span>
+}</code></pre>
+              </div>
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Escribe <code>factorial(n)</code> con while. Luego un contador regresivo de 10 a 0 con do-while.
+            </div>          </div>
+        </article>
+        <!-- Leccion 2.6 -->
+        <article class="lesson" id="leccion-2-6" aria-labelledby="leccion-2-6-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-2-6"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-2-6-title">2.6 Bucle for...of (iterables)</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              <code>for...of</code> recorre los <strong>valores</strong> de cualquier iterable (arrays, strings, Map, Set).
+            </p>            <h4>Recorrer arrays</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> frutas = [<span class="code-string">"manzana"</span>, <span class="code-string">"pera"</span>, <span class="code-string">"banana"</span>];
+
+<span class="code-keyword">for</span> (<span class="code-keyword">const</span> fruta <span class="code-keyword">of</span> frutas) {
+  console.<span class="code-func">log</span>(fruta);
+}
+<span class="code-comment">// "manzana", "pera", "banana"</span></code></pre>            <h4>Recorrer strings</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> palabra = <span class="code-string">"Hola"</span>;
+<span class="code-keyword">for</span> (<span class="code-keyword">const</span> letra <span class="code-keyword">of</span> palabra) {
+  console.<span class="code-func">log</span>(letra);
+}
+<span class="code-comment">// "H", "o", "l", "a"</span></code></pre>            <h4>Con entries() para tener indice</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> notas = [<span class="code-number">90</span>, <span class="code-number">75</span>, <span class="code-number">85</span>, <span class="code-number">60</span>];
+<span class="code-keyword">for</span> (<span class="code-keyword">const</span> [indice, nota] <span class="code-keyword">of</span> notas.<span class="code-func">entries</span>()) {
+  console.<span class="code-func">log</span>(<span class="code-string">`</span><span class="code-keyword">${</span>indice<span class="code-keyword">}</span><span class="code-string">: </span><span class="code-keyword">${</span>nota<span class="code-keyword">}</span><span class="code-string">`</span>);
+}
+<span class="code-comment">// "0: 90", "1: 75", "2: 85", "3: 60"</span></code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; for...in en arrays</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> arr = [<span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span>];
+<span class="code-keyword">for</span> (<span class="code-keyword">var</span> i <span class="code-keyword">in</span> arr) {
+  console.<span class="code-func">log</span>(arr[i]); <span class="code-comment">// tipo string!</span>
+}</code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; for...of en arrays</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> arr = [<span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span>];
+<span class="code-keyword">for</span> (<span class="code-keyword">const</span> val <span class="code-keyword">of</span> arr) {
+  console.<span class="code-func">log</span>(val); <span class="code-comment">// tipo number</span>
+}</code></pre>
+              </div>
+            </div>            <div class="callout callout-info" role="note">
+              <strong>for...of vs for...in:</strong> <code>for...of</code> recorre valores, <code>for...in</code> recorre propiedades/indices.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Dado <code>[10, 25, 30, 15, 40]</code>, usa for...of para encontrar el mayor, calcular el promedio y contar los mayores a 20.
+            </div>          </div>
+        </article>
+        <!-- Leccion 2.7 -->
+        <article class="lesson" id="leccion-2-7" aria-labelledby="leccion-2-7-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-2-7"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-2-7-title">2.7 Bucle for...in (propiedades)</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              <code>for...in</code> recorre las <strong>propiedades enumerables</strong> de un objeto. Ideal para objetos, no para arrays.
+            </p>            <h4>Recorrer objetos</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> usuario = {
+  nombre: <span class="code-string">"Carlos"</span>,
+  edad: <span class="code-number">30</span>,
+  email: <span class="code-string">"carlos@email.com"</span>
+};
+
+<span class="code-keyword">for</span> (<span class="code-keyword">const</span> clave <span class="code-keyword">in</span> usuario) {
+  console.<span class="code-func">log</span>(<span class="code-string">`</span><span class="code-keyword">${</span>clave<span class="code-keyword">}</span><span class="code-string">: </span><span class="code-keyword">${</span>usuario[clave]<span class="code-keyword">}</span><span class="code-string">`</span>);
+}
+<span class="code-comment">// "nombre: Carlos", "edad: 30", "email: carlos@email.com"</span></code></pre>            <h4>Verificar propiedades con hasOwnProperty</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> prototype = { tipo: <span class="code-string">"animal"</span> };
+<span class="code-keyword">const</span> gato = Object.<span class="code-func">create</span>(prototype);
+gato.nombre = <span class="code-string">"Mishi"</span>;
+
+<span class="code-keyword">for</span> (<span class="code-keyword">const</span> clave <span class="code-keyword">in</span> gato) {
+  <span class="code-keyword">if</span> (gato.<span class="code-func">hasOwnProperty</span>(clave)) {
+    console.<span class="code-func">log</span>(<span class="code-string">`</span><span class="code-keyword">${</span>clave<span class="code-keyword">}</span><span class="code-string">: </span><span class="code-keyword">${</span>gato[clave]<span class="code-keyword">}</span><span class="code-string">`</span>);
+  }
+}
+<span class="code-comment">// Solo "nombre: Mishi" (no incluye "tipo")</span></code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; for...in en arrays</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> arr = [<span class="code-number">10</span>, <span class="code-number">20</span>, <span class="code-number">30</span>];
+<span class="code-keyword">for</span> (<span class="code-keyword">const</span> i <span class="code-keyword">in</span> arr) {
+  console.<span class="code-func">log</span>(i, arr[i]);
+}
+<span class="code-comment">// i es "0", "1", "2" (strings!)</span></code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; for...of + entries()</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> arr = [<span class="code-number">10</span>, <span class="code-number">20</span>, <span class="code-number">30</span>];
+<span class="code-keyword">for</span> (<span class="code-keyword">const</span> [i, val] <span class="code-keyword">of</span> arr.<span class="code-func">entries</span>()) {
+  console.<span class="code-func">log</span>(i, val);
+}
+<span class="code-comment">// i es 0, 1, 2 (numbers)</span></code></pre>
+              </div>
+            </div>            <div class="callout callout-info" role="note">
+              <strong>Regla:</strong> Usa <code>for...of</code> para arrays/strings. Usa <code>for...in</code> para objetos.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Dado <code>{a: 1, b: 2, c: 3}</code>, calcula la suma de valores, crea un nuevo objeto con valores duplicados, cuenta las propiedades.
+            </div>          </div>
+        </article>
+        <!-- Leccion 2.8 -->
+        <article class="lesson" id="leccion-2-8" aria-labelledby="leccion-2-8-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-2-8"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-2-8-title">2.8 break y continue</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              <code>break</code> termina el bucle. <code>continue</code> salta a la siguiente iteracion.
+            </p>            <h4>break: salir del bucle</h4>            <pre class="code-block"><code><span class="code-comment">// Encontrar el primer multiplo de 7</span>
+<span class="code-keyword">const</span> numeros = [<span class="code-number">2</span>, <span class="code-number">5</span>, <span class="code-number">8</span>, <span class="code-number">14</span>, <span class="code-number">21</span>, <span class="code-number">30</span>];
+<span class="code-keyword">for</span> (<span class="code-keyword">const</span> num <span class="code-keyword">of</span> numeros) {
+  <span class="code-keyword">if</span> (num % <span class="code-number">7</span> === <span class="code-number">0</span>) {
+    console.<span class="code-func">log</span>(<span class="code-string">`Primer multiplo: </span><span class="code-keyword">${</span>num<span class="code-keyword">}</span><span class="code-string">`</span>);
+    <span class="code-keyword">break</span>;
+  }
+}
+<span class="code-comment">// "Primer multiplo: 14"</span></code></pre>            <h4>continue: saltar iteracion</h4>            <pre class="code-block"><code><span class="code-comment">// Imprimir solo impares</span>
+<span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">1</span>; i &lt;= <span class="code-number">10</span>; i++) {
+  <span class="code-keyword">if</span> (i % <span class="code-number">2</span> === <span class="code-number">0</span>) <span class="code-keyword">continue</span>;
+  console.<span class="code-func">log</span>(i);  <span class="code-comment">// 1, 3, 5, 7, 9</span>
+}</code></pre>            <h4>Etiquetas (labels) para bucles anidados</h4>            <pre class="code-block"><code><span class="code-comment">// break solo sale del bucle mas interno</span>
+<span class="code-keyword">externo</span>:
+<span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">3</span>; i++) {
+  <span class="code-keyword">for</span> (<span class="code-keyword">let</span> j = <span class="code-number">0</span>; j &lt; <span class="code-number">3</span>; j++) {
+    <span class="code-keyword">if</span> (i === <span class="code-number">1</span> &amp;&amp; j === <span class="code-number">1</span>) <span class="code-keyword">break</span> <span class="code-keyword">externo</span>;
+    console.<span class="code-func">log</span>(<span class="code-string">`</span><span class="code-keyword">${</span>i<span class="code-keyword">}</span><span class="code-string">,</span><span class="code-keyword">${</span>j<span class="code-keyword">}</span><span class="code-string">`</span>);
+  }
+}
+<span class="code-comment">// "0,0", "0,1", "0,2", "1,0"</span></code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Condicional envolvente</h4>
+            <pre class="code-block"><code><span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">100</span>; i++) {
+  <span class="code-keyword">if</span> (i % <span class="code-number">2</span> === <span class="code-number">0</span>) {
+    console.<span class="code-func">log</span>(i);
+  }
+}</code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Continue para early exit</h4>
+            <pre class="code-block"><code><span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">100</span>; i++) {
+  <span class="code-keyword">if</span> (i % <span class="code-number">2</span> !== <span class="code-number">0</span>) <span class="code-keyword">continue</span>;
+  console.<span class="code-func">log</span>(i);
+}</code></pre>
+              </div>
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Busca el primer numero divisible por 3 y 5 en <code>[7, 12, 15, 20, 25, 30]</code> con break. Filtra solo positivos con continue.
+            </div>          </div>
+        </article>
+      </div>
+      <div class="module-next-bar">
+        <h3>Siguiente: Modulo 3 &mdash; Funciones</h3>
+        <p>Continua tu aprendizaje con el siguiente modulo</p>
+        <button class="btn btn-primary module-next-btn" data-next="3">Siguiente Modulo &rarr;</button>
+      </div>
+    </section>
+    <!-- MODULO 3: FUNCIONES -->
+    <section class="module" id="modulo-3" aria-labelledby="modulo-3-title">
+      <div class="container">
+        <div class="module-progress-header">
+          <span class="module-progress-label">Modulo 3 &mdash; 0/8 lecciones</span>
+          <div class="progress-bar-container"><div class="progress-fill" style="width:0%"></div></div>
+          <button class="module-back-btn" type="button" onclick="document.body.classList.remove('course-mode'); document.querySelectorAll('.module[id]').forEach(function(m){m.classList.remove('active-module')}); window.scrollTo(0,0);">Volver al inicio</button>
+        </div>
+        <header class="module-header">
+          <span class="module-badge">Modulo 03</span>
+          <h2 class="section-title" id="modulo-3-title">Funciones</h2>
+          <p class="module-desc">
+            Las funciones son bloques de codigo reutilizables. En este modulo aprenderas a crearlas,
+            pasarles parametros, entender closures y usarlas como callbacks.
+          </p>
+        </header>
+        <!-- Leccion 3.1 -->
+        <article class="lesson" id="leccion-3-1" aria-labelledby="leccion-3-1-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-3-1"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-3-1-title">3.1 Declaracion de Funciones</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Una <strong>funcion</strong> es un bloque de codigo que ejecuta una tarea. Se define con <code>function</code> y se invoca con <code>()</code>.
+            </p>            <h4>Sintaxis basica</h4>            <pre class="code-block"><code><span class="code-comment">// Declaracion de funcion</span>
+<span class="code-keyword">function</span> <span class="code-func">saludar</span>() {
+  console.<span class="code-func">log</span>(<span class="code-string">"Hola, mundo!"</span>);
+}
+
+saludar();  <span class="code-comment">// Invocar / llamar</span>
+saludar();  <span class="code-comment">// Puedes llamarla muchas veces</span></code></pre>            <h4>Parametros y retorno</h4>            <pre class="code-block"><code><span class="code-keyword">function</span> <span class="code-func">sumar</span>(a, b) {
+  <span class="code-keyword">return</span> a + b;
+}
+
+<span class="code-keyword">const</span> resultado = <span class="code-func">sumar</span>(<span class="code-number">5</span>, <span class="code-number">3</span>);
+console.<span class="code-func">log</span>(resultado);  <span class="code-comment">// 8</span>
+
+<span class="code-comment">// Sin return, la funcion retorna undefined</span>
+<span class="code-keyword">function</span> <span class="code-func">saludar2</span>(nombre) {
+  console.<span class="code-func">log</span>(<span class="code-string">`Hola </span><span class="code-keyword">${</span>nombre<span class="code-keyword">}</span><span class="code-string">`</span>);
+}
+<span class="code-keyword">const</span> res = <span class="code-func">saludar2</span>(<span class="code-string">"Ana"</span>);
+console.<span class="code-func">log</span>(res);  <span class="code-comment">// undefined</span></code></pre>            <h4>Hoisting (elevacion)</h4>            <pre class="code-block"><code><span class="code-comment">// Las declaraciones se "elevan" al inicio del scope</span>
+<span class="code-func">miFuncion</span>();  <span class="code-comment">// Funciona!</span>
+
+<span class="code-keyword">function</span> <span class="code-func">miFuncion</span>() {
+  console.<span class="code-func">log</span>(<span class="code-string">"Funciona por hoisting"</span>);
+}</code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Expresion con var</h4>
+            <pre class="code-block"><code><span class="code-keyword">var</span> <span class="code-func">cuadrado</span> = <span class="code-keyword">function</span>(x) {
+  <span class="code-keyword">return</span> x * x;
+};</code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Declaracion de funcion</h4>
+            <pre class="code-block"><code><span class="code-keyword">function</span> <span class="code-func">cuadrado</span>(x) {
+  <span class="code-keyword">return</span> x * x;
+}</code></pre>
+              </div>
+            </div>            <div class="callout callout-info" role="note">
+              <strong>Preferencia:</strong> Usa <strong>declaraciones de funcion</strong> para funciones nombradas. Son mas legibles y permiten hoisting.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Crea <code>esPar(n)</code>, <code>factorial(n)</code>, <code>contarVocales(texto)</code>, <code>invertirString(texto)</code>.
+            </div>          </div>
+        </article>
+        <!-- Leccion 3.2 -->
+        <article class="lesson" id="leccion-3-2" aria-labelledby="leccion-3-2-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-3-2"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-3-2-title">3.2 Expresiones de Funcion</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Una <strong>expresion de funcion</strong> asigna una funcion a una variable. No tiene hoisting.
+            </p>            <h4>Sintaxis</h4>            <pre class="code-block"><code><span class="code-comment">// Expresion anonima</span>
+<span class="code-keyword">const</span> <span class="code-func">sumar</span> = <span class="code-keyword">function</span>(a, b) {
+  <span class="code-keyword">return</span> a + b;
+};
+
+<span class="code-comment">// Expresion con nombre</span>
+<span class="code-keyword">const</span> <span class="code-func">restar</span> = <span class="code-keyword">function</span> <span class="code-func">restar</span>(a, b) {
+  <span class="code-keyword">return</span> a - b;
+};
+
+console.<span class="code-func">log</span>(<span class="code-func">sumar</span>(<span class="code-number">5</span>, <span class="code-number">3</span>));  <span class="code-comment">// 8</span></code></pre>            <h4>Hoisting: la diferencia clave</h4>            <pre class="code-block"><code><span class="code-comment">// Declaracion: funciona antes de definirla</span>
+<span class="code-func">suma</span>(<span class="code-number">2</span>, <span class="code-number">3</span>);  <span class="code-comment">// 5</span>
+<span class="code-keyword">function</span> <span class="code-func">suma</span>(a, b) { <span class="code-keyword">return</span> a + b; }
+
+<span class="code-comment">// Expresion: NO funciona antes</span>
+<span class="code-func">resta</span>(<span class="code-number">5</span>, <span class="code-number">2</span>);  <span class="code-comment">// ReferenceError!</span>
+<span class="code-keyword">const</span> <span class="code-func">resta</span> = <span class="code-keyword">function</span>(a, b) { <span class="code-keyword">return</span> a - b; };</code></pre>            <h4>Uso en callbacks</h4>            <pre class="code-block"><code><span class="code-comment">// Expresiones son utiles como callbacks</span>
+[<span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span>].<span class="code-func">map</span>(<span class="code-keyword">function</span>(num) {
+  <span class="code-keyword">return</span> num * <span class="code-number">2</span>;
+});
+
+<span class="code-comment">// Funcion que recibe otra funcion</span>
+<span class="code-keyword">function</span> <span class="code-func">operar</span>(a, b, operacion) {
+  <span class="code-keyword">return</span> <span class="code-func">operacion</span>(a, b);
+}
+<span class="code-keyword">const</span> suma = <span class="code-func">operar</span>(<span class="code-number">5</span>, <span class="code-number">3</span>, <span class="code-keyword">function</span>(a, b) { <span class="code-keyword">return</span> a + b; });
+console.<span class="code-func">log</span>(suma);  <span class="code-comment">// 8</span></code></pre>            <div class="callout callout-info" role="note">
+              <strong>Diferencia con arrow:</strong> Las expresiones de funcion son utiles cuando necesitas el contexto <code>this</code> dinamico o arguments.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Crea <code>filtrar(array, condicion)</code> que use una expresion de funcion como callback para filtrar elementos.
+            </div>          </div>
+        </article>
+        <!-- Leccion 3.3 -->
+        <article class="lesson" id="leccion-3-3" aria-labelledby="leccion-3-3-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-3-3"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-3-3-title">3.3 Arrow Functions (ES6)</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Las <strong>arrow functions</strong> son una forma compacta de escribir funciones. Introducidas en ES6.
+            </p>            <h4 id="subtema-basico">Sintaxis basica</h4>            <pre class="code-block"><code><span class="code-comment">// Basico</span>
+<span class="code-keyword">const</span> <span class="code-func">saludar</span> = (nombre) =&gt; {
+  <span class="code-keyword">return</span> <span class="code-string">`Hola </span><span class="code-keyword">${</span>nombre<span class="code-keyword">}</span><span class="code-string">!`</span>;
+};
+
+<span class="code-comment">// Conciso: una sola expresion</span>
+<span class="code-keyword">const</span> <span class="code-func">doblar</span> = n =&gt; n * <span class="code-number">2</span>;
+
+<span class="code-comment">// Un solo parametro: parentesis opcionales</span>
+<span class="code-keyword">const</span> <span class="code-func">esPositivo</span> = n =&gt; n &gt; <span class="code-number">0</span>;
+
+<span class="code-comment">// Sin parametros: parentesis obligatorio</span>
+<span class="code-keyword">const</span> <span class="code-func">hola</span> = () =&gt; <span class="code-string">"Hola!"</span>;
+
+<span class="code-comment">// Multiples parametros</span>
+<span class="code-keyword">const</span> <span class="code-func">sumar</span> = (a, b) =&gt; a + b;</code></pre>            <h4 id="subtema-retorno">Retorno implicito y explicito</h4>            <pre class="code-block"><code><span class="code-comment">// Explicito: con return y llaves</span>
+<span class="code-keyword">const</span> <span class="code-func">cuadrado</span> = (x) =&gt; {
+  <span class="code-keyword">return</span> x * x;
+};
+
+<span class="code-comment">// Implicito: sin return ni llaves</span>
+<span class="code-keyword">const</span> <span class="code-func">cuadrado2</span> = x =&gt; x * x;
+
+<span class="code-comment">// Retornar objeto literal: parentesis obligatorio</span>
+<span class="code-keyword">const</span> <span class="code-func">crearUsuario</span> = (nombre, edad) =&gt; ({
+  nombre,
+  edad,
+  activo: <span class="code-keyword">true</span>
+});</code></pre>            <h4 id="subtema-this">Diferencia con this</h4>            <pre class="code-block"><code><span class="code-comment">// Arrow: hereda this del scope externo</span>
+<span class="code-keyword">const</span> contador = {
+  valor: <span class="code-number">0</span>,
+  incrementar: () =&gt; {
+    <span class="code-comment">// this es el scope externo, NO contador</span>
+    <span class="code-comment">// this.valor es undefined</span>
+  }
+};
+
+<span class="code-comment">// Funcion regular: this es el objeto</span>
+<span class="code-keyword">const</span> contador2 = {
+  valor: <span class="code-number">0</span>,
+  <span class="code-func">incrementar</span>() {
+    <span class="code-keyword">this</span>.valor++;  <span class="code-comment">// this es contador2</span>
+  }
+};</code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Function expression</h4>
+            <pre class="code-block"><code><span class="code-comment">// Muchos caracteres</span>
+[<span class="code-number">1</span>,<span class="code-number">2</span>,<span class="code-number">3</span>].<span class="code-func">map</span>(<span class="code-keyword">function</span>(x) {
+  <span class="code-keyword">return</span> x * <span class="code-number">2</span>;
+});</code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Arrow function</h4>
+            <pre class="code-block"><code><span class="code-comment">// Conciso y claro</span>
+[<span class="code-number">1</span>,<span class="code-number">2</span>,<span class="code-number">3</span>].<span class="code-func">map</span>(x =&gt; x * <span class="code-number">2</span>);</code></pre>
+              </div>
+            </div>            <div class="callout callout-warning" role="note">
+              <strong>No uses arrow functions:</strong> Como metodos de objeto, como constructores, o cuando necesitas <code>this</code> dinamico.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Convierte a arrow functions: <code>esPar</code>, <code>promedio</code>, <code>saludar</code>, <code>filtrarMayores</code>, <code>CrearPersona</code> (retorna objeto).
+            </div>          </div>
+        </article>
+        <!-- Leccion 3.4 -->
+        <article class="lesson" id="leccion-3-4" aria-labelledby="leccion-3-4-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-3-4"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-3-4-title">3.4 Parametros default, rest y spread</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              JavaScript permite valores por defecto, parametros ilimitados con rest, y desestructuracion de argumentos.
+            </p>            <h4 id="subtema-default">Valores por Defecto</h4>            <pre class="code-block"><code><span class="code-keyword">function</span> <span class="code-func">saludar</span>(nombre = <span class="code-string">"Visitante"</span>) {
+  <span class="code-keyword">return</span> <span class="code-string">`Hola </span><span class="code-keyword">${</span>nombre<span class="code-keyword">}</span><span class="code-string">!`</span>;
+}
+
+console.<span class="code-func">log</span>(<span class="code-func">saludar</span>(<span class="code-string">"Ana"</span>));   <span class="code-comment">// "Hola Ana!"</span>
+console.<span class="code-func">log</span>(<span class="code-func">saludar</span>());      <span class="code-comment">// "Hola Visitante!"</span>
+
+<span class="code-comment">// Valores por defecto son evaluados</span>
+<span class="code-keyword">function</span> <span class="code-func">crearId</span>(prefijo = <span class="code-string">"usr"</span>, num = <span class="code-number">Math</span>.<span class="code-func">random</span>()) {
+  <span class="code-keyword">return</span> <span class="code-string">`</span><span class="code-keyword">${</span>prefijo<span class="code-keyword">}</span><span class="code-string">-</span><span class="code-keyword">${</span><span class="code-number">Math</span>.<span class="code-func">floor</span>(num * <span class="code-number">1000</span>)<span class="code-keyword">}</span><span class="code-string">`</span>;
+}</code></pre>            <h4 id="subtema-rest">Parametros rest (...)</h4>            <pre class="code-block"><code><span class="code-comment">// Recibe argumentos ilimitados como array</span>
+<span class="code-keyword">function</span> <span class="code-func">sumar</span>(...numeros) {
+  <span class="code-keyword">return</span> numeros.<span class="code-func">reduce</span>((acc, n) =&gt; acc + n, <span class="code-number">0</span>);
+}
+
+console.<span class="code-func">log</span>(<span class="code-func">sumar</span>(<span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span>));        <span class="code-comment">// 6</span>
+console.<span class="code-func">log</span>(<span class="code-func">sumar</span>(<span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span>, <span class="code-number">4</span>, <span class="code-number">5</span>)); <span class="code-comment">// 15</span></code></pre>            <h4 id="subtema-spread">Spread en llamadas</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> numeros = [<span class="code-number">3</span>, <span class="code-number">1</span>, <span class="code-number">4</span>, <span class="code-number">1</span>, <span class="code-number">5</span>, <span class="code-number">9</span>];
+
+<span class="code-comment">// Spread: expandir array como argumentos</span>
+console.<span class="code-func">log</span>(<span class="code-number">Math</span>.<span class="code-func">max</span>(...numeros));  <span class="code-comment">// 9</span>
+console.<span class="code-func">log</span>(<span class="code-number">Math</span>.<span class="code-func">min</span>(...numeros));  <span class="code-comment">// 1</span></code></pre>            <h4>Desestructuracion de parametros</h4>            <pre class="code-block"><code><span class="code-comment">// Extraer propiedades de un objeto como parametros</span>
+<span class="code-keyword">function</span> <span class="code-func">crearUsuario</span>({ nombre, email, rol = <span class="code-string">"user"</span> }) {
+  <span class="code-keyword">return</span> { nombre, email, rol, activo: <span class="code-keyword">true</span> };
+}
+
+<span class="code-keyword">const</span> user = <span class="code-func">crearUsuario</span>({
+  nombre: <span class="code-string">"Carlos"</span>,
+  email: <span class="code-string">"c@email.com"</span>
+});
+console.<span class="code-func">log</span>(user);</code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; Valores por defecto con ||</h4>
+            <pre class="code-block"><code><span class="code-keyword">function</span> <span class="code-func">config</span>(host, port, ssl) {
+  host = host || <span class="code-string">"localhost"</span>;
+  port = port || <span class="code-number">3000</span>;
+}</code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Parametros default</h4>
+            <pre class="code-block"><code><span class="code-keyword">function</span> <span class="code-func">config</span>(
+  host = <span class="code-string">"localhost"</span>,
+  port = <span class="code-number">3000</span>,
+  ssl = <span class="code-keyword">false</span>
+) {}</code></pre>
+              </div>
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Crea <code>sumar(...nums)</code>, <code>filtrar</code>, <code>redimensionar</code>, <code>mezclarColores</code>.
+            </div>          </div>
+        </article>
+        <!-- Leccion 3.5 -->
+        <article class="lesson" id="leccion-3-5" aria-labelledby="leccion-3-5-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-3-5"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-3-5-title">3.5 Scope: Alcance de Variables</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              <strong>Scope</strong> determina donde es accesible una variable. JavaScript tiene tres tipos de scope.
+            </p>            <h4 id="subtema-global">Scope Global</h4>            <pre class="code-block"><code><span class="code-comment">// Global: accesible desde cualquier lugar</span>
+<span class="code-keyword">const</span> globalVar = <span class="code-string">"soy global"</span>;
+
+<span class="code-keyword">function</span> <span class="code-func">mostrar</span>() {
+  console.<span class="code-func">log</span>(globalVar);  <span class="code-comment">// Accesible</span>
+}
+
+<span class="code-keyword">if</span> (<span class="code-keyword">true</span>) {
+  console.<span class="code-func">log</span>(globalVar);  <span class="code-comment">// Accesible</span>
+}</code></pre>            <h4 id="subtema-function">Scope de Funcion</h4>            <pre class="code-block"><code><span class="code-keyword">function</span> <span class="code-func">miFuncion</span>() {
+  <span class="code-keyword">const</span> local = <span class="code-string">"soy local"</span>;
+  console.<span class="code-func">log</span>(local);      <span class="code-comment">// Accesible</span>
+}
+
+<span class="code-comment">// console.log(local); // ReferenceError!</span></code></pre>            <h4 id="subtema-block">Scope de Bloque (let/const)</h4>            <pre class="code-block"><code><span class="code-keyword">if</span> (<span class="code-keyword">true</span>) {
+  <span class="code-keyword">const</span> bloque = <span class="code-string">"dentro del bloque"</span>;
+  <span class="code-keyword">let</span> temp = <span class="code-number">10</span>;
+  console.<span class="code-func">log</span>(bloque);  <span class="code-comment">// Accesible</span>
+}
+
+<span class="code-comment">// console.log(bloque); // ReferenceError!</span>
+
+<span class="code-comment">// var ignora el scope de bloque</span>
+<span class="code-keyword">if</span> (<span class="code-keyword">true</span>) {
+  <span class="code-keyword">var</span> escape = <span class="code-string">"me escapo"</span>;
+}
+console.<span class="code-func">log</span>(escape);  <span class="code-comment">// "me escapo"</span></code></pre>            <h4 id="subtema-chain">Cadena de Scope</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> a = <span class="code-number">1</span>;
+
+<span class="code-keyword">function</span> <span class="code-func">fuera</span>() {
+  <span class="code-keyword">const</span> b = <span class="code-number">2</span>;
+
+  <span class="code-keyword">function</span> <span class="code-func">dentro</span>() {
+    <span class="code-keyword">const</span> c = <span class="code-number">3</span>;
+    <span class="code-comment">// Puede acceder a a, b y c</span>
+    console.<span class="code-func">log</span>(a + b + c);  <span class="code-comment">// 6</span>
+  }
+
+  <span class="code-comment">// No puede acceder a c</span>
+  <span class="code-comment">// console.log(c); // ReferenceError</span>
+}</code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; var en for</h4>
+            <pre class="code-block"><code><span class="code-keyword">for</span> (<span class="code-keyword">var</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">3</span>; i++) {
+  <span class="code-func">setTimeout</span>(() =&gt; {
+    console.<span class="code-func">log</span>(i);
+  }, <span class="code-number">1000</span>);
+}
+<span class="code-comment">// 3, 3, 3</span></code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; let en for</h4>
+            <pre class="code-block"><code><span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">3</span>; i++) {
+  <span class="code-func">setTimeout</span>(() =&gt; {
+    console.<span class="code-func">log</span>(i);
+  }, <span class="code-number">1000</span>);
+}
+<span class="code-comment">// 0, 1, 2</span></code></pre>
+              </div>
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Predice el output de 3 ejemplos con scope. Crea programa que demuestre scope global, de funcion y de bloque.
+            </div>          </div>
+        </article>
+        <!-- Leccion 3.6 -->
+        <article class="lesson" id="leccion-3-6" aria-labelledby="leccion-3-6-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-3-6"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-3-6-title">3.6 Closures</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Un <strong>closure</strong> es cuando una funcion "recuerda" las variables de su scope exterior, incluso despues de que esa funcion haya terminado de ejecutarse.
+            </p>            <h4>Ejemplo basico de closure</h4>            <pre class="code-block"><code><span class="code-keyword">function</span> <span class="code-func">creadorSaludo</span>(saludo) {
+  <span class="code-keyword">return</span> <span class="code-keyword">function</span>(nombre) {
+    <span class="code-keyword">return</span> <span class="code-string">`</span><span class="code-keyword">${</span>saludo<span class="code-keyword">}</span><span class="code-string">, </span><span class="code-keyword">${</span>nombre<span class="code-keyword">}</span><span class="code-string">!`</span>;
+  };
+}
+
+<span class="code-keyword">const</span> saludarEn = <span class="code-func">creadorSaludo</span>(<span class="code-string">"Hola"</span>);
+<span class="code-keyword">const</span> saludarEnIngles = <span class="code-func">creadorSaludo</span>(<span class="code-string">"Hello"</span>);
+
+console.<span class="code-func">log</span>(<span class="code-func">saludarEn</span>(<span class="code-string">"Carlos"</span>));      <span class="code-comment">// "Hola, Carlos!"</span>
+console.<span class="code-func">log</span>(<span class="code-func">saludarEnIngles</span>(<span class="code-string">"John"</span>));  <span class="code-comment">// "Hello, John!"</span></code></pre>            <h4>Contador con closure</h4>            <pre class="code-block"><code><span class="code-keyword">function</span> <span class="code-func">crearContador</span>() {
+  <span class="code-keyword">let</span> cuenta = <span class="code-number">0</span>;
+  <span class="code-keyword">return</span> {
+    <span class="code-func">incrementar</span>() { <span class="code-keyword">return</span> ++cuenta; },
+    <span class="code-func">decrementar</span>() { <span class="code-keyword">return</span> --cuenta; },
+    <span class="code-func">obtener</span>() { <span class="code-keyword">return</span> cuenta; }
+  };
+}
+
+<span class="code-keyword">const</span> contador = <span class="code-func">crearContador</span>();
+console.<span class="code-func">log</span>(contador.<span class="code-func">incrementar</span>());  <span class="code-comment">// 1</span>
+console.<span class="code-func">log</span>(contador.<span class="code-func">incrementar</span>());  <span class="code-comment">// 2</span>
+console.<span class="code-func">log</span>(contador.<span class="code-func">obtener</span>());     <span class="code-comment">// 2</span></code></pre>            <h4>Closure en loops (problema clasico)</h4>            <pre class="code-block"><code><span class="code-comment">// Problema clasico con var</span>
+<span class="code-keyword">for</span> (<span class="code-keyword">var</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">3</span>; i++) {
+  <span class="code-func">setTimeout</span>(() =&gt; console.<span class="code-func">log</span>(i), <span class="code-number">1000</span>);
+}
+<span class="code-comment">// 3, 3, 3 (closure captura var)</span>
+
+<span class="code-comment">// Solucion 1: let</span>
+<span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">3</span>; i++) {
+  <span class="code-func">setTimeout</span>(() =&gt; console.<span class="code-func">log</span>(i), <span class="code-number">1000</span>);
+}
+<span class="code-comment">// 0, 1, 2</span>
+
+<span class="code-comment">// Solucion 2: IIFE con closure</span>
+<span class="code-keyword">for</span> (<span class="code-keyword">var</span> i = <span class="code-number">0</span>; i &lt; <span class="code-number">3</span>; i++) {
+  (<span class="code-keyword">function</span>(j) {
+    <span class="code-func">setTimeout</span>(() =&gt; console.<span class="code-func">log</span>(j), <span class="code-number">1000</span>);
+  })(i);
+}</code></pre>            <div class="callout callout-info" role="note">
+              <strong>Closure:</strong> Toda funcion en JavaScript es un closure. Puede acceder a variables de su scope exterior.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Crea <code>crearMultiplicador(factor)</code>, <code>crearCache()</code>, <code>crearDebounce()</code>, <code>crearToggle()</code>.
+            </div>          </div>
+        </article>
+        <!-- Leccion 3.7 -->
+        <article class="lesson" id="leccion-3-7" aria-labelledby="leccion-3-7-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-3-7"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-3-7-title">3.7 Callbacks</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Un <strong>callback</strong> es una funcion que se pasa como argumento a otra funcion para ser ejecutada despues.
+            </p>            <h4>Callbacks sincronos</h4>            <pre class="code-block"><code><span class="code-keyword">function</span> <span class="code-func">procesar</span>(datos, exito, error) {
+  <span class="code-keyword">if</span> (datos.length &gt; <span class="code-number">0</span>) {
+    <span class="code-func">exito</span>(datos);
+  } <span class="code-keyword">else</span> {
+    <span class="code-func">error</span>(<span class="code-string">"Sin datos"</span>);
+  }
+}
+
+<span class="code-func">procesar</span>(
+  [<span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span>],
+  (data) =&gt; console.<span class="code-func">log</span>(<span class="code-string">"Exito:"</span>, data),
+  (err) =&gt; console.<span class="code-func">error</span>(err)
+);</code></pre>            <h4>Callbacks asincronos</h4>            <pre class="code-block"><code>console.<span class="code-func">log</span>(<span class="code-string">"Inicio"</span>);
+
+<span class="code-func">setTimeout</span>(() =&gt; {
+  console.<span class="code-func">log</span>(<span class="code-string">"Despues de 2s"</span>);
+}, <span class="code-number">2000</span>);
+
+console.<span class="code-func">log</span>(<span class="code-string">"Fin"</span>);
+<span class="code-comment">// "Inicio", "Fin", "Despues de 2s"</span></code></pre>            <h4>Array methods con callbacks</h4>            <pre class="code-block"><code><span class="code-keyword">const</span> numeros = [<span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span>, <span class="code-number">4</span>, <span class="code-number">5</span>];
+
+<span class="code-comment">// map: transforma cada elemento</span>
+<span class="code-keyword">const</span> dobles = numeros.<span class="code-func">map</span>(n =&gt; n * <span class="code-number">2</span>);
+
+<span class="code-comment">// filter: selecciona elementos</span>
+<span class="code-keyword">const</span> pares = numeros.<span class="code-func">filter</span>(n =&gt; n % <span class="code-number">2</span> === <span class="code-number">0</span>);
+
+<span class="code-comment">// reduce: acumula en un valor</span>
+<span class="code-keyword">const</span> suma = numeros.<span class="code-func">reduce</span>((acc, n) =&gt; acc + n, <span class="code-number">0</span>);
+
+<span class="code-comment">// find: primer elemento que cumple</span>
+<span class="code-keyword">const</span> mayor = numeros.<span class="code-func">find</span>(n =&gt; n &gt; <span class="code-number">3</span>);
+
+<span class="code-comment">// some / every</span>
+console.<span class="code-func">log</span>(numeros.<span class="code-func">some</span>(n =&gt; n &gt; <span class="code-number">4</span>));  <span class="code-comment">// true</span>
+console.<span class="code-func">log</span>(numeros.<span class="code-func">every</span>(n =&gt; n &gt; <span class="code-number">0</span>)); <span class="code-comment">// true</span></code></pre>            <div class="comparison">
+              <div class="comparison-bad">
+                <h4>&#10007; For loop imperativo</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> result = [];
+<span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i &lt; arr.length; i++) {
+  <span class="code-keyword">if</span> (arr[i] &gt; <span class="code-number">10</span>) {
+    result.<span class="code-func">push</span>(arr[i] * <span class="code-number">2</span>);
+  }
+}</code></pre>
+              </div>
+              <div class="comparison-good">
+                <h4>&#10003; Metodos funcionales</h4>
+            <pre class="code-block"><code><span class="code-keyword">const</span> result = arr
+  .<span class="code-func">filter</span>(n =&gt; n &gt; <span class="code-number">10</span>)
+  .<span class="code-func">map</span>(n =&gt; n * <span class="code-number">2</span>);</code></pre>
+              </div>
+            </div>            <div class="callout callout-warning" role="note">
+              <strong>Callback hell:</strong> Multiples callbacks anidados dificultan el codigo. Promesas y async/await lo resuelven.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Convierte cada for loop a map/filter/reduce. Procesa array de productos con precio, categoria y stock.
+            </div>          </div>
+        </article>
+        <!-- Leccion 3.8 -->
+        <article class="lesson" id="leccion-3-8" aria-labelledby="leccion-3-8-title">
+          <header class="lesson-header">
+            <button class="lesson-complete-btn" type="button" aria-label="Marcar leccion como completada" title="Marcar como completada">
+              <span class="lesson-complete-checkbox" data-lesson="leccion-3-8"></span>
+            </button>
+            <h3 class="lesson__title" id="leccion-3-8-title">3.8 IIFE: Immediately Invoked Function Expression</h3>
+          </header>
+          <div class="lesson-content">            <p>
+              Una <strong>IIFE</strong> es una funcion que se ejecuta inmediatamente despues de ser definida.
+            </p>            <h4>Sintaxis basica</h4>            <pre class="code-block"><code><span class="code-comment">// IIFE clasica</span>
+(<span class="code-keyword">function</span>() {
+  console.<span class="code-func">log</span>(<span class="code-string">"Se ejecuta inmediatamente!"</span>);
+})();
+
+<span class="code-comment">// Con parametros</span>
+(<span class="code-keyword">function</span>(nombre) {
+  console.<span class="code-func">log</span>(<span class="code-string">`Hola </span><span class="code-keyword">${</span>nombre<span class="code-keyword">}</span><span class="code-string">!`</span>);
+})(<span class="code-string">"Mundo"</span>);
+
+<span class="code-comment">// Arrow IIFE</span>
+(() =&gt; {
+  console.<span class="code-func">log</span>(<span class="code-string">"Con arrow"</span>);
+})();</code></pre>            <h4>Usos practicos</h4>            <pre class="code-block"><code><span class="code-comment">// 1. Aislar scope (evitar colision de variables)</span>
+(<span class="code-keyword">function</span>() {
+  <span class="code-keyword">const</span> privado = <span class="code-string">"no accesible fuera"</span>;
+  console.<span class="code-func">log</span>(privado);
+})();
+
+<span class="code-comment">// 2. Inicializacion</span>
+<span class="code-keyword">const</span> modulo = (<span class="code-keyword">function</span>() {
+  <span class="code-keyword">let</span> count = <span class="code-number">0</span>;
+  <span class="code-keyword">return</span> {
+    <span class="code-func">increment</span>() { <span class="code-keyword">return</span> ++count; },
+    <span class="code-func">getCount</span>() { <span class="code-keyword">return</span> count; }
+  };
+})();
+
+modulo.<span class="code-func">increment</span>();
+modulo.<span class="code-func">increment</span>();
+console.<span class="code-func">log</span>(modulo.<span class="code-func">getCount</span>());  <span class="code-comment">// 2</span></code></pre>            <h4>IIFE con async/await</h4>            <pre class="code-block"><code><span class="code-comment">// IIFE async para usar await en scope global</span>
+(<span class="code-keyword">async function</span>() {
+  <span class="code-keyword">const</span> response = <span class="code-keyword">await</span> <span class="code-func">fetch</span>(<span class="code-string">"https://api.ejemplo.com/data"</span>);
+  <span class="code-keyword">const</span> data = <span class="code-keyword">await</span> response.<span class="code-func">json</span>();
+  console.<span class="code-func">log</span>(data);
+})();</code></pre>            <div class="callout callout-info" role="note">
+              <strong>Modulos:</strong> Con ES modules, las IIFE son menos necesarias. Pero siguen siendo utiles para inicializacion rapida.
+            </div>            <div class="callout callout-success" role="note">
+              <strong>Ejercicio:</strong> Crea IIFE para: configuracion, contador privado, polyfill, logger. Implementa patron modulo con IIFE.
+            </div>          </div>
+        </article>
+      </div>
+      <div class="module-next-bar">
+        <h3>Siguiente: Modulo 4 &mdash; Arrays y Objetos</h3>
+        <p>Continua tu aprendizaje con el siguiente modulo</p>
+        <button class="btn btn-primary module-next-btn" data-next="4">Siguiente Modulo &rarr;</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contacto" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo"><span aria-hidden="true">{}</span> Curso<span class="logo-accent">JS</span></span>
+          <p>Curso completo y gratuito de JavaScript para aprender programacion web desde cero.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="#sobre-mi">Sobre Mi</a></li>
+            <li><a href="#contenido">Contenido</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="https://github.com/Dvskked" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="mailto:siriusplanet76@gmail.com">Email</a></li>
+            <li><a href="https://dvskked.github.io/andres.github.io" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Andres Felipe Forero Sanchez. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
